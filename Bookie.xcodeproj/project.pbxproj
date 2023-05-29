@@ -20,6 +20,9 @@
 		BD5C02722A253B05005AA537 /* PreloaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02712A253B05005AA537 /* PreloaderModel.swift */; };
 		BD5C02762A253B95005AA537 /* PreloaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02742A253B95005AA537 /* PreloaderCollectionViewCell.swift */; };
 		BD5C02772A253B95005AA537 /* PreloaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5C02752A253B95005AA537 /* PreloaderCollectionViewCell.xib */; };
+		BD5C027B2A253CC3005AA537 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = BD5C02792A253CC1005AA537 /* SFPRODISPLAYBOLD.OTF */; };
+		BD5C027C2A253CC3005AA537 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = BD5C027A2A253CC3005AA537 /* SFPRODISPLAYMEDIUM.OTF */; };
+		BD5C027F2A253D75005AA537 /* UIFont+ProDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C027E2A253D75005AA537 /* UIFont+ProDisplay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		BD5C02712A253B05005AA537 /* PreloaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderModel.swift; sourceTree = "<group>"; };
 		BD5C02742A253B95005AA537 /* PreloaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD5C02752A253B95005AA537 /* PreloaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreloaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		BD5C02792A253CC1005AA537 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
+		BD5C027A2A253CC3005AA537 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
+		BD5C027E2A253D75005AA537 /* UIFont+ProDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+ProDisplay.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 		BD5C024D2A25373A005AA537 /* Bookie */ = {
 			isa = PBXGroup;
 			children = (
+				BD5C027D2A253CF1005AA537 /* Fonts */,
 				BD5C02782A253C56005AA537 /* Application */,
 				BD5C026B2A253963005AA537 /* Extensions */,
 				BD5C026E2A253AD6005AA537 /* Preloader */,
@@ -85,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BD5C026C2A25398C005AA537 /* UIColor+extension.swift */,
+				BD5C027E2A253D75005AA537 /* UIFont+ProDisplay.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -131,6 +139,15 @@
 				BD5C02502A25373A005AA537 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		BD5C027D2A253CF1005AA537 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C02792A253CC1005AA537 /* SFPRODISPLAYBOLD.OTF */,
+				BD5C027A2A253CC3005AA537 /* SFPRODISPLAYMEDIUM.OTF */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +218,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5C027C2A253CC3005AA537 /* SFPRODISPLAYMEDIUM.OTF in Resources */,
 				BD5C025B2A25373C005AA537 /* LaunchScreen.storyboard in Resources */,
 				BD5C02772A253B95005AA537 /* PreloaderCollectionViewCell.xib in Resources */,
 				BD5C02582A25373C005AA537 /* Assets.xcassets in Resources */,
+				BD5C027B2A253CC3005AA537 /* SFPRODISPLAYBOLD.OTF in Resources */,
 				BD5C02562A25373A005AA537 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +238,7 @@
 				BD5C024F2A25373A005AA537 /* AppDelegate.swift in Sources */,
 				BD5C02722A253B05005AA537 /* PreloaderModel.swift in Sources */,
 				BD5C02512A25373A005AA537 /* SceneDelegate.swift in Sources */,
+				BD5C027F2A253D75005AA537 /* UIFont+ProDisplay.swift in Sources */,
 				BD5C026D2A25398C005AA537 /* UIColor+extension.swift in Sources */,
 				BD5C02762A253B95005AA537 /* PreloaderCollectionViewCell.swift in Sources */,
 			);
