@@ -14,7 +14,7 @@ enum ProDisplayFontType: String {
 }
 
 extension UIFont {
-    static func kanit(ofSize size: CGFloat, fontType type: ProDisplayFontType) -> UIFont {
+    static func displayFont(ofSize size: CGFloat, fontType type: ProDisplayFontType) -> UIFont {
         return UIFont(name: type.rawValue, size: size) ?? UIFont.systemFont(ofSize: size)
     }
 }

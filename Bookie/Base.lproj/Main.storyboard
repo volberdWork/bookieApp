@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lWx-nh-rEm">
-                                <rect key="frame" x="0.0" y="213" width="393" height="426"/>
+                                <rect key="frame" x="0.0" y="183.33333333333334" width="393" height="485.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3XX-d1-5oH">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3XX-d1-5oH">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -41,7 +41,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lWx-nh-rEm" secondAttribute="trailing" id="YPd-Tl-t62"/>
                             <constraint firstItem="djD-df-r8t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="16" id="Zb6-VQ-h78"/>
                             <constraint firstItem="djD-df-r8t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bIt-ra-jsL"/>
-                            <constraint firstItem="lWx-nh-rEm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="lzu-ba-Q2c"/>
+                            <constraint firstItem="lWx-nh-rEm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.57" id="lzu-ba-Q2c"/>
                         </constraints>
                     </view>
                     <connections>
