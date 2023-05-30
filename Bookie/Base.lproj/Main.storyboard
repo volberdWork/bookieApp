@@ -28,8 +28,21 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQp-Kh-gtj">
+                                <rect key="frame" x="118" y="700" width="157" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="lU9-SX-hd9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yEG-dl-jak"/>
+                                </connections>
+                            </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="djD-df-r8t">
-                                <rect key="frame" x="138.66666666666666" y="808" width="116" height="26"/>
+                                <rect key="frame" x="138.66666666666666" y="760" width="116" height="26"/>
+                                <color key="pageIndicatorTintColor" red="1" green="0.58431372549019611" blue="0.0" alpha="0.69757261970974749" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemOrangeColor"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,25 +51,47 @@
                             <constraint firstItem="lWx-nh-rEm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4QW-OY-WNg"/>
                             <constraint firstItem="lWx-nh-rEm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Y1-ca-i6H"/>
                             <constraint firstItem="lWx-nh-rEm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AoQ-Ti-vIa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="djD-df-r8t" secondAttribute="bottom" constant="32" id="INa-Ea-My2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lWx-nh-rEm" secondAttribute="trailing" id="YPd-Tl-t62"/>
-                            <constraint firstItem="djD-df-r8t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="16" id="Zb6-VQ-h78"/>
                             <constraint firstItem="djD-df-r8t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bIt-ra-jsL"/>
+                            <constraint firstItem="oQp-Kh-gtj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="dtC-0l-qsD"/>
+                            <constraint firstItem="djD-df-r8t" firstAttribute="top" secondItem="oQp-Kh-gtj" secondAttribute="bottom" constant="16" id="h88-P2-x5y"/>
                             <constraint firstItem="lWx-nh-rEm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.57" id="lzu-ba-Q2c"/>
+                            <constraint firstItem="oQp-Kh-gtj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qri-NG-j8N"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="lWx-nh-rEm" id="sp6-rZ-4QH"/>
                         <outlet property="pageControl" destination="djD-df-r8t" id="6iW-0m-lQq"/>
+                        <outlet property="startButton" destination="oQp-Kh-gtj" id="uEi-jc-CtD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="-2"/>
         </scene>
+        <!--Main View Controller-->
+        <scene sceneID="NYa-CR-EUs">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="wte-4I-FHj" customClass="MainViewController" customModule="Bookie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PHK-l6-mop">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Vs-eX-nFh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOR-V0-Edn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="-2"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -4,6 +4,7 @@ class PreloaderController: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet var startButton: UIButton!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var collectionView: UICollectionView!
     
@@ -14,7 +15,7 @@ class PreloaderController: UIViewController {
         PreloaderModel(imageName: "logoImage", title: "Your pocket sport & events manager"),
         PreloaderModel(imageName: "logoImage", title: "Your pocket sport & events manager")
     ]
-    
+
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -40,6 +41,12 @@ class PreloaderController: UIViewController {
     private func configureView() {
         view.backgroundColor = .customDarkGrey
         collectionView.backgroundColor = .clear
+        
+        startButton.isHidden = true
+        startButton.setTitle("START", for: .normal)
+        startButton.tintColor = .white
+        startButton.backgroundColor = .customYellow
+        startButton.layer.cornerRadius = 22
     }
     
     private func configureFlowLayout() {
@@ -51,6 +58,14 @@ class PreloaderController: UIViewController {
         collectionView.collectionViewLayout = flowLayout
         collectionView.isPagingEnabled = true
     }
+    
+    @IBAction func startButtonPressed(_ sender: UIButton) {
+        let vc = MainViewController() //change this to your class name
+        self.present(vc, animated: true, completion: nil)
+        
+        
+    }
+    
 }
 
 // MARK: - UICollectionViewDataSource
@@ -71,7 +86,14 @@ extension PreloaderController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension PreloaderController: UICollectionViewDelegate {
-   
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+           if indexPath.row == loaderBase.count - 1 {
+               startButton.isHidden = false
+           } else {
+               startButton.isHidden = true
+           }
+        pageControl.currentPage = indexPath.row
+       }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

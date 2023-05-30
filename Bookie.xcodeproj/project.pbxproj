@@ -39,6 +39,7 @@
 		BD5C029F2A2682C4005AA537 /* EventsStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02972A2682C3005AA537 /* EventsStat.swift */; };
 		BD5C02A02A2682C4005AA537 /* TeamStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02982A2682C3005AA537 /* TeamStatistic.swift */; };
 		BD5C02A62A26847B005AA537 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD5C02A52A26847B005AA537 /* RealmSwift */; };
+		BD5C02AA2A268DD5005AA537 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02A92A268DD5005AA537 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		BD5C02962A2682C3005AA537 /* ScreenModifiersType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModifiersType.swift; sourceTree = "<group>"; };
 		BD5C02972A2682C3005AA537 /* EventsStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsStat.swift; sourceTree = "<group>"; };
 		BD5C02982A2682C3005AA537 /* TeamStatistic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamStatistic.swift; sourceTree = "<group>"; };
+		BD5C02A92A268DD5005AA537 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				BD5C02782A253C56005AA537 /* Application */,
 				BD5C026B2A253963005AA537 /* Extensions */,
 				BD5C026E2A253AD6005AA537 /* Preloader */,
+				BD5C02A72A268DAA005AA537 /* MAin */,
 				BD5C02542A25373A005AA537 /* Main.storyboard */,
 				BD5C02572A25373C005AA537 /* Assets.xcassets */,
 				BD5C02592A25373C005AA537 /* LaunchScreen.storyboard */,
@@ -221,6 +224,22 @@
 			path = NetworkingService;
 			sourceTree = "<group>";
 		};
+		BD5C02A72A268DAA005AA537 /* MAin */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C02A82A268DBB005AA537 /* Controller */,
+			);
+			path = MAin;
+			sourceTree = "<group>";
+		};
+		BD5C02A82A268DBB005AA537 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C02A92A268DD5005AA537 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -308,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD5C02902A2682A8005AA537 /* EndpointParameters.swift in Sources */,
+				BD5C02AA2A268DD5005AA537 /* MainViewController.swift in Sources */,
 				BD5C029F2A2682C4005AA537 /* EventsStat.swift in Sources */,
 				BD5C028E2A2682A8005AA537 /* NetworkManager.swift in Sources */,
 				BD5C02532A25373A005AA537 /* PreloaderController.swift in Sources */,
