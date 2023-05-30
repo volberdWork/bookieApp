@@ -2,32 +2,44 @@ import UIKit
 
 class PreloaderController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var collectionView: UICollectionView!
     
-    var loaderBase = [
+    // MARK: - Properties
+    
+    private let loaderBase = [
         PreloaderModel(imageName: "logoImage", title: "Your pocket sport & events manager"),
         PreloaderModel(imageName: "logoImage", title: "Your pocket sport & events manager"),
         PreloaderModel(imageName: "logoImage", title: "Your pocket sport & events manager")
     ]
     
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        registerCell()
+        setupCollectionView()
         configureView()
         configureFlowLayout()
     }
     
-    private func configureView() {
-        view.backgroundColor = .customDarkGrey
-        collectionView.backgroundColor = .clear
+    // MARK: - Setup
+    
+    private func setupCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        registerCell()
     }
     
     private func registerCell() {
         let cellNib = UINib(nibName: "PreloaderCollectionViewCell", bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: "PreloaderCollectionViewCell")
+    }
+    
+    private func configureView() {
+        view.backgroundColor = .customDarkGrey
+        collectionView.backgroundColor = .clear
     }
     
     private func configureFlowLayout() {
@@ -40,6 +52,8 @@ class PreloaderController: UIViewController {
         collectionView.isPagingEnabled = true
     }
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension PreloaderController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -54,9 +68,13 @@ extension PreloaderController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension PreloaderController: UICollectionViewDelegate {
     // Implement delegate methods if needed
 }
+
+// MARK: - UICollectionViewDelegateFlowLayout
 
 extension PreloaderController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
