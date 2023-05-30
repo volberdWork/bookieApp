@@ -26,13 +26,7 @@ extension UIView {
     }
 }
 
-extension UIColor {
-    static let logoColor =  UIColor(red: 0.914, green: 0.82, blue: 0.576, alpha: 1)
-    static let greyColor = UIColor(red: 0.161, green: 0.165, blue: 0.18, alpha: 0.6)
-    static let oneMoreBlue = UIColor(red: 0.161, green: 0.165, blue: 0.18, alpha: 0.6)
-    static let textColor = UIColor.red //UIColor(red: 0.8863, green: 0.8941, blue: 0.902, alpha: 1.0)
-    static let silver = UIColor(red: 0.8667, green: 0.8745, blue: 0.8941, alpha: 1.0)
-}
+
 
 extension UITableView {
     var disclosureView: UIImageView {

@@ -38,6 +38,7 @@
 		BD5C029E2A2682C4005AA537 /* ScreenModifiersType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02962A2682C3005AA537 /* ScreenModifiersType.swift */; };
 		BD5C029F2A2682C4005AA537 /* EventsStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02972A2682C3005AA537 /* EventsStat.swift */; };
 		BD5C02A02A2682C4005AA537 /* TeamStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02982A2682C3005AA537 /* TeamStatistic.swift */; };
+		BD5C02A62A26847B005AA537 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD5C02A52A26847B005AA537 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5C02A62A26847B005AA537 /* RealmSwift in Frameworks */,
 				BD5C026A2A253777005AA537 /* Kingfisher in Frameworks */,
 				BD5C02642A25375D005AA537 /* Alamofire in Frameworks */,
 				BD5C02672A25376B005AA537 /* SnapKit in Frameworks */,
@@ -184,7 +186,7 @@
 		BD5C02802A268295005AA537 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BD5C02832A2682A7005AA537 /* Networking NEW */,
+				BD5C02832A2682A7005AA537 /* NetworkingService */,
 				BD5C02812A2682A7005AA537 /* Relm Model */,
 			);
 			path = Models;
@@ -198,7 +200,7 @@
 			path = "Relm Model";
 			sourceTree = "<group>";
 		};
-		BD5C02832A2682A7005AA537 /* Networking NEW */ = {
+		BD5C02832A2682A7005AA537 /* NetworkingService */ = {
 			isa = PBXGroup;
 			children = (
 				BD5C02972A2682C3005AA537 /* EventsStat.swift */,
@@ -216,7 +218,7 @@
 				BD5C02882A2682A8005AA537 /* NetworkingExtensions.swift */,
 				BD5C02892A2682A8005AA537 /* EndpointParameters.swift */,
 			);
-			path = "Networking NEW";
+			path = NetworkingService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +241,7 @@
 				BD5C02632A25375D005AA537 /* Alamofire */,
 				BD5C02662A25376B005AA537 /* SnapKit */,
 				BD5C02692A253777005AA537 /* Kingfisher */,
+				BD5C02A52A26847B005AA537 /* RealmSwift */,
 			);
 			productName = Bookie;
 			productReference = BD5C024B2A25373A005AA537 /* Bookie.app */;
@@ -272,6 +275,7 @@
 				BD5C02622A25375C005AA537 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BD5C02652A25376B005AA537 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				BD5C02682A253777005AA537 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BD5C02A42A26847B005AA537 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = BD5C024C2A25373A005AA537 /* Products */;
 			projectDirPath = "";
@@ -570,6 +574,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		BD5C02A42A26847B005AA537 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -587,6 +599,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD5C02682A253777005AA537 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		BD5C02A52A26847B005AA537 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD5C02A42A26847B005AA537 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
