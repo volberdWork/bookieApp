@@ -71,7 +71,7 @@ extension PreloaderController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension PreloaderController: UICollectionViewDelegate {
-    // Implement delegate methods if needed
+   
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
