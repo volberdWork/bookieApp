@@ -28,6 +28,10 @@ class TermsViewController: UIViewController {
         termstextView.textColor = .white
         termstextView.textAlignment = .center
         
+        let backButton = UIBarButtonItem()
+        backButton.title = "Menu"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
         
         
         if vc == "terms"{

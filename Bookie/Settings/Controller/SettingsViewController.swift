@@ -10,6 +10,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureVIew()
@@ -20,6 +21,9 @@ class SettingsViewController: UIViewController {
     private func configureVIew(){
         view.backgroundColor = .customLightGrey
         tableView.backgroundColor = .customDarkGrey
+        let backButton = UIBarButtonItem()
+        backButton.title = "Menu"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
 
