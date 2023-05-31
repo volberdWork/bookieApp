@@ -60,10 +60,13 @@ class PreloaderController: UIViewController {
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        let vc = MainViewController() //change this to your class name
-        self.present(vc, animated: true, completion: nil)
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
+            return
+        }
         
-        
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .flipHorizontal
+        present(controller, animated: true)
     }
     
 }

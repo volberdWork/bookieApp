@@ -40,6 +40,8 @@
 		BD5C02A02A2682C4005AA537 /* TeamStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02982A2682C3005AA537 /* TeamStatistic.swift */; };
 		BD5C02A62A26847B005AA537 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD5C02A52A26847B005AA537 /* RealmSwift */; };
 		BD5C02AA2A268DD5005AA537 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02A92A268DD5005AA537 /* MainViewController.swift */; };
+		BD5C02AE2A27D2C1005AA537 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02AD2A27D2C1005AA537 /* SettingsViewController.swift */; };
+		BD5C02B22A27DAA8005AA537 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02B12A27DAA8005AA537 /* TermsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		BD5C02972A2682C3005AA537 /* EventsStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsStat.swift; sourceTree = "<group>"; };
 		BD5C02982A2682C3005AA537 /* TeamStatistic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamStatistic.swift; sourceTree = "<group>"; };
 		BD5C02A92A268DD5005AA537 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BD5C02AD2A27D2C1005AA537 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BD5C02B12A27DAA8005AA537 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,12 +114,14 @@
 		BD5C024D2A25373A005AA537 /* Bookie */ = {
 			isa = PBXGroup;
 			children = (
+				BD5C02AF2A27DA8B005AA537 /* Terms */,
 				BD5C02802A268295005AA537 /* Models */,
 				BD5C027D2A253CF1005AA537 /* Fonts */,
 				BD5C02782A253C56005AA537 /* Application */,
 				BD5C026B2A253963005AA537 /* Extensions */,
 				BD5C026E2A253AD6005AA537 /* Preloader */,
 				BD5C02A72A268DAA005AA537 /* MAin */,
+				BD5C02AB2A27D25D005AA537 /* Settings */,
 				BD5C02542A25373A005AA537 /* Main.storyboard */,
 				BD5C02572A25373C005AA537 /* Assets.xcassets */,
 				BD5C02592A25373C005AA537 /* LaunchScreen.storyboard */,
@@ -240,6 +246,38 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BD5C02AB2A27D25D005AA537 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C02AC2A27D2A8005AA537 /* Controller */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BD5C02AC2A27D2A8005AA537 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C02AD2A27D2C1005AA537 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD5C02AF2A27DA8B005AA537 /* Terms */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C02B02A27DA94005AA537 /* Controller */,
+			);
+			path = Terms;
+			sourceTree = "<group>";
+		};
+		BD5C02B02A27DA94005AA537 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C02B12A27DAA8005AA537 /* TermsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,6 +373,7 @@
 				BD5C029E2A2682C4005AA537 /* ScreenModifiersType.swift in Sources */,
 				BD5C024F2A25373A005AA537 /* AppDelegate.swift in Sources */,
 				BD5C02A02A2682C4005AA537 /* TeamStatistic.swift in Sources */,
+				BD5C02B22A27DAA8005AA537 /* TermsViewController.swift in Sources */,
 				BD5C029B2A2682C4005AA537 /* FixtureStatistic.swift in Sources */,
 				BD5C02722A253B05005AA537 /* PreloaderModel.swift in Sources */,
 				BD5C02512A25373A005AA537 /* SceneDelegate.swift in Sources */,
@@ -349,6 +388,7 @@
 				BD5C028F2A2682A8005AA537 /* NetworkingExtensions.swift in Sources */,
 				BD5C02762A253B95005AA537 /* PreloaderCollectionViewCell.swift in Sources */,
 				BD5C029A2A2682C4005AA537 /* FavoritesManager.swift in Sources */,
+				BD5C02AE2A27D2C1005AA537 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
