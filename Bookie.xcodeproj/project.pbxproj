@@ -42,6 +42,10 @@
 		BD5C02AA2A268DD5005AA537 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02A92A268DD5005AA537 /* MainViewController.swift */; };
 		BD5C02AE2A27D2C1005AA537 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02AD2A27D2C1005AA537 /* SettingsViewController.swift */; };
 		BD5C02B22A27DAA8005AA537 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02B12A27DAA8005AA537 /* TermsViewController.swift */; };
+		BD82E51C2A2BC147005EEF71 /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82E51A2A2BC147005EEF71 /* UpcomingCollectionViewCell.swift */; };
+		BD82E51D2A2BC147005EEF71 /* UpcomingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD82E51B2A2BC147005EEF71 /* UpcomingCollectionViewCell.xib */; };
+		BD82E5212A2BD1D3005EEF71 /* CurrentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82E51F2A2BD1D3005EEF71 /* CurrentCollectionViewCell.swift */; };
+		BD82E5222A2BD1D3005EEF71 /* CurrentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD82E5202A2BD1D3005EEF71 /* CurrentCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,10 @@
 		BD5C02A92A268DD5005AA537 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD5C02AD2A27D2C1005AA537 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BD5C02B12A27DAA8005AA537 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		BD82E51A2A2BC147005EEF71 /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD82E51B2A2BC147005EEF71 /* UpcomingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingCollectionViewCell.xib; sourceTree = "<group>"; };
+		BD82E51F2A2BD1D3005EEF71 /* CurrentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD82E5202A2BD1D3005EEF71 /* CurrentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +241,7 @@
 		BD5C02A72A268DAA005AA537 /* MAin */ = {
 			isa = PBXGroup;
 			children = (
+				BD82E5192A2BC123005EEF71 /* View */,
 				BD5C02A82A268DBB005AA537 /* Controller */,
 			);
 			path = MAin;
@@ -276,6 +285,25 @@
 				BD5C02B12A27DAA8005AA537 /* TermsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD82E5192A2BC123005EEF71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD82E51E2A2BD178005EEF71 /* CurrentCell */,
+				BD82E51A2A2BC147005EEF71 /* UpcomingCollectionViewCell.swift */,
+				BD82E51B2A2BC147005EEF71 /* UpcomingCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD82E51E2A2BD178005EEF71 /* CurrentCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD82E51F2A2BD1D3005EEF71 /* CurrentCollectionViewCell.swift */,
+				BD82E5202A2BD1D3005EEF71 /* CurrentCollectionViewCell.xib */,
+			);
+			path = CurrentCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,9 +376,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD82E5222A2BD1D3005EEF71 /* CurrentCollectionViewCell.xib in Resources */,
 				BD5C027C2A253CC3005AA537 /* SFPRODISPLAYMEDIUM.OTF in Resources */,
 				BD5C025B2A25373C005AA537 /* LaunchScreen.storyboard in Resources */,
 				BD5C02772A253B95005AA537 /* PreloaderCollectionViewCell.xib in Resources */,
+				BD82E51D2A2BC147005EEF71 /* UpcomingCollectionViewCell.xib in Resources */,
 				BD5C02582A25373C005AA537 /* Assets.xcassets in Resources */,
 				BD5C027B2A253CC3005AA537 /* SFPRODISPLAYBOLD.OTF in Resources */,
 				BD5C02562A25373A005AA537 /* Main.storyboard in Resources */,
@@ -371,6 +401,7 @@
 				BD5C02532A25373A005AA537 /* PreloaderController.swift in Sources */,
 				BD5C028B2A2682A8005AA537 /* Statistics.swift in Sources */,
 				BD5C029E2A2682C4005AA537 /* ScreenModifiersType.swift in Sources */,
+				BD82E5212A2BD1D3005EEF71 /* CurrentCollectionViewCell.swift in Sources */,
 				BD5C024F2A25373A005AA537 /* AppDelegate.swift in Sources */,
 				BD5C02A02A2682C4005AA537 /* TeamStatistic.swift in Sources */,
 				BD5C02B22A27DAA8005AA537 /* TermsViewController.swift in Sources */,
@@ -380,6 +411,7 @@
 				BD5C029C2A2682C4005AA537 /* FixturePlayers.swift in Sources */,
 				BD5C029D2A2682C4005AA537 /* FavoriteTeam.swift in Sources */,
 				BD5C028C2A2682A8005AA537 /* LiveDataBuffer.swift in Sources */,
+				BD82E51C2A2BC147005EEF71 /* UpcomingCollectionViewCell.swift in Sources */,
 				BD5C027F2A253D75005AA537 /* UIFont+ProDisplay.swift in Sources */,
 				BD5C02992A2682C4005AA537 /* PlayerStatistic.swift in Sources */,
 				BD5C026D2A25398C005AA537 /* UIColor+extension.swift in Sources */,

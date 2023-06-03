@@ -78,28 +78,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noDataText" translatesAutoresizingMaskIntoConstraints="NO" id="epB-r6-Hfr">
+                                <rect key="frame" x="16" y="340.66666666666669" width="361" height="170.66666666666669"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3l-om-vsO">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noDataText" translatesAutoresizingMaskIntoConstraints="NO" id="epB-r6-Hfr">
-                                        <rect key="frame" x="32" y="299.66666666666669" width="329" height="149.66666666666669"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="epB-r6-Hfr" firstAttribute="centerX" secondItem="w3l-om-vsO" secondAttribute="centerX" id="6bi-ry-voi"/>
-                                    <constraint firstAttribute="trailing" secondItem="epB-r6-Hfr" secondAttribute="trailing" constant="32" id="PRn-gt-XGr"/>
-                                    <constraint firstItem="epB-r6-Hfr" firstAttribute="height" secondItem="w3l-om-vsO" secondAttribute="height" multiplier="0.2" id="fT8-OV-Iqy"/>
-                                    <constraint firstItem="epB-r6-Hfr" firstAttribute="leading" secondItem="w3l-om-vsO" secondAttribute="leading" constant="32" id="h2S-4G-5t0"/>
-                                    <constraint firstItem="epB-r6-Hfr" firstAttribute="centerY" secondItem="w3l-om-vsO" secondAttribute="centerY" id="wde-jx-kJh"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Vs-eX-nFh"/>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.14509803921568626" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="epB-r6-Hfr" firstAttribute="centerX" secondItem="PHK-l6-mop" secondAttribute="centerX" id="AIv-h3-ZZz"/>
                             <constraint firstItem="4Vs-eX-nFh" firstAttribute="trailing" secondItem="w3l-om-vsO" secondAttribute="trailing" id="Ci3-gN-dwA"/>
                             <constraint firstItem="w3l-om-vsO" firstAttribute="top" secondItem="4Vs-eX-nFh" secondAttribute="top" id="DMo-43-tjz"/>
+                            <constraint firstItem="epB-r6-Hfr" firstAttribute="height" secondItem="PHK-l6-mop" secondAttribute="height" multiplier="0.2" id="H9d-ep-TKp"/>
+                            <constraint firstItem="epB-r6-Hfr" firstAttribute="centerY" secondItem="PHK-l6-mop" secondAttribute="centerY" id="MTF-Rs-7e0"/>
+                            <constraint firstItem="epB-r6-Hfr" firstAttribute="leading" secondItem="4Vs-eX-nFh" secondAttribute="leading" constant="16" id="ZM4-TB-r75"/>
+                            <constraint firstItem="4Vs-eX-nFh" firstAttribute="trailing" secondItem="epB-r6-Hfr" secondAttribute="trailing" constant="16" id="fAF-ze-JcQ"/>
                             <constraint firstItem="w3l-om-vsO" firstAttribute="leading" secondItem="4Vs-eX-nFh" secondAttribute="leading" id="mGO-Bj-o7K"/>
                             <constraint firstAttribute="bottom" secondItem="w3l-om-vsO" secondAttribute="bottom" id="oCQ-vt-YuI"/>
                         </constraints>
@@ -248,7 +243,7 @@
     <resources>
         <image name="leftIconImage" width="14" height="12"/>
         <image name="logoAppImage" width="67.666664123535156" height="14"/>
-        <image name="noDataText" width="677" height="243"/>
+        <image name="noDataText" width="225.66667175292969" height="81"/>
         <image name="rightIconImage" width="12" height="11.666666984558105"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

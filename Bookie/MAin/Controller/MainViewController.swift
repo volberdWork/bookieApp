@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
     
     private func configureView(){
         conteinerView.backgroundColor = .customDarkGrey
+        view.backgroundColor = .customLightGrey
    
     }
   
