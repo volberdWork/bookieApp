@@ -38,6 +38,8 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
         awayTeamLabel.font = .displayFont(ofSize: 25, fontType: .SFBold)
         awayTeamLabel.textAlignment = .left
         
+        baseVIew.backgroundColor = .clear
+        
         
     }
     
