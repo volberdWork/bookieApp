@@ -18,11 +18,14 @@ class MainViewController: UIViewController {
     @IBOutlet var upComingLabel: UILabel!
     @IBOutlet var upcomingCollectionView: UICollectionView!
     
+    let network = NetworkManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
         configureCollectionViews()
         
+       
     }
     
     private func configureView(){
