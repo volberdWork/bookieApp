@@ -49,6 +49,7 @@
 		BD9E50E12A2D34A200996D82 /* PreferredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E50E02A2D34A200996D82 /* PreferredViewController.swift */; };
 		BD9E50E82A2D377E00996D82 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E50E62A2D377E00996D82 /* SettingsTableViewCell.swift */; };
 		BD9E50E92A2D377E00996D82 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9E50E72A2D377E00996D82 /* SettingsTableViewCell.xib */; };
+		BD9E50EE2A2D3C1B00996D82 /* SettingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E50ED2A2D3C1B00996D82 /* SettingsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		BD9E50E02A2D34A200996D82 /* PreferredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredViewController.swift; sourceTree = "<group>"; };
 		BD9E50E62A2D377E00996D82 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		BD9E50E72A2D377E00996D82 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		BD9E50ED2A2D3C1B00996D82 /* SettingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 		BD5C02AB2A27D25D005AA537 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				BD9E50EC2A2D3C0800996D82 /* Model */,
 				BD5C02AC2A27D2A8005AA537 /* Controller */,
 			);
 			path = Settings;
@@ -334,16 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				BD9E50E42A2D374B00996D82 /* View */,
-				BD9E50E32A2D374300996D82 /* Controller */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		BD9E50E32A2D374300996D82 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		BD9E50E42A2D374B00996D82 /* View */ = {
@@ -361,6 +356,14 @@
 				BD9E50E72A2D377E00996D82 /* SettingsTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BD9E50EC2A2D3C0800996D82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD9E50ED2A2D3C1B00996D82 /* SettingsList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +457,7 @@
 			files = (
 				BD5C02902A2682A8005AA537 /* EndpointParameters.swift in Sources */,
 				BD5C02AA2A268DD5005AA537 /* MainViewController.swift in Sources */,
+				BD9E50EE2A2D3C1B00996D82 /* SettingsList.swift in Sources */,
 				BD5C029F2A2682C4005AA537 /* EventsStat.swift in Sources */,
 				BD5C028E2A2682A8005AA537 /* NetworkManager.swift in Sources */,
 				BD5C02532A25373A005AA537 /* PreloaderController.swift in Sources */,
