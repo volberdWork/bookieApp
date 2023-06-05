@@ -10,6 +10,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
+    var settingsList = SettingsList.getSettingsList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class SettingsViewController: UIViewController {
         backButton.title = "Menu"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
+        tableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingsTableViewCell")
+        
+        tableView.backgroundColor = .customDarkGrey
         
     }
     
@@ -42,13 +46,16 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return settingsList.count
         
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath) as! SettingsTableViewCell
+
+        
+        return cell
     }
     
     

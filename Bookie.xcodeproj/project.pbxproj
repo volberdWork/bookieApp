@@ -50,6 +50,10 @@
 		BD9E50E82A2D377E00996D82 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E50E62A2D377E00996D82 /* SettingsTableViewCell.swift */; };
 		BD9E50E92A2D377E00996D82 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9E50E72A2D377E00996D82 /* SettingsTableViewCell.xib */; };
 		BD9E50EE2A2D3C1B00996D82 /* SettingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E50ED2A2D3C1B00996D82 /* SettingsList.swift */; };
+		BDA9022F2A2DBCE1000AA5F9 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9022D2A2DBCE1000AA5F9 /* ProfileTableViewCell.swift */; };
+		BDA902302A2DBCE1000AA5F9 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA9022E2A2DBCE1000AA5F9 /* ProfileTableViewCell.xib */; };
+		BDA902332A2DBDBD000AA5F9 /* ALProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = BDA902322A2DBDBD000AA5F9 /* ALProgressView */; };
+		BDA902352A2DBF12000AA5F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA902342A2DBF12000AA5F9 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +98,9 @@
 		BD9E50E62A2D377E00996D82 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		BD9E50E72A2D377E00996D82 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		BD9E50ED2A2D3C1B00996D82 /* SettingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsList.swift; sourceTree = "<group>"; };
+		BDA9022D2A2DBCE1000AA5F9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		BDA9022E2A2DBCE1000AA5F9 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		BDA902342A2DBF12000AA5F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +110,7 @@
 			files = (
 				BD5C02A62A26847B005AA537 /* RealmSwift in Frameworks */,
 				BD5C026A2A253777005AA537 /* Kingfisher in Frameworks */,
+				BDA902332A2DBDBD000AA5F9 /* ALProgressView in Frameworks */,
 				BD5C02642A25375D005AA537 /* Alamofire in Frameworks */,
 				BD5C02672A25376B005AA537 /* SnapKit in Frameworks */,
 			);
@@ -130,6 +138,7 @@
 		BD5C024D2A25373A005AA537 /* Bookie */ = {
 			isa = PBXGroup;
 			children = (
+				BDA902292A2DBCA1000AA5F9 /* Profile */,
 				BD9E50E22A2D373A00996D82 /* Menu */,
 				BD9E50DE2A2D346C00996D82 /* Preferred */,
 				BD5C02AF2A27DA8B005AA537 /* Terms */,
@@ -366,6 +375,40 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BDA902292A2DBCA1000AA5F9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BDA9022B2A2DBCAF000AA5F9 /* View */,
+				BDA9022A2A2DBCA9000AA5F9 /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BDA9022A2A2DBCA9000AA5F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDA902342A2DBF12000AA5F9 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDA9022B2A2DBCAF000AA5F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDA9022C2A2DBCB6000AA5F9 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDA9022C2A2DBCB6000AA5F9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BDA9022D2A2DBCE1000AA5F9 /* ProfileTableViewCell.swift */,
+				BDA9022E2A2DBCE1000AA5F9 /* ProfileTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,6 +430,7 @@
 				BD5C02662A25376B005AA537 /* SnapKit */,
 				BD5C02692A253777005AA537 /* Kingfisher */,
 				BD5C02A52A26847B005AA537 /* RealmSwift */,
+				BDA902322A2DBDBD000AA5F9 /* ALProgressView */,
 			);
 			productName = Bookie;
 			productReference = BD5C024B2A25373A005AA537 /* Bookie.app */;
@@ -421,6 +465,7 @@
 				BD5C02652A25376B005AA537 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				BD5C02682A253777005AA537 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				BD5C02A42A26847B005AA537 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				BDA902312A2DBDBD000AA5F9 /* XCRemoteSwiftPackageReference "ALProgressView" */,
 			);
 			productRefGroup = BD5C024C2A25373A005AA537 /* Products */;
 			projectDirPath = "";
@@ -445,6 +490,7 @@
 				BD5C02582A25373C005AA537 /* Assets.xcassets in Resources */,
 				BD5C027B2A253CC3005AA537 /* SFPRODISPLAYBOLD.OTF in Resources */,
 				BD5C02562A25373A005AA537 /* Main.storyboard in Resources */,
+				BDA902302A2DBCE1000AA5F9 /* ProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,8 +504,10 @@
 				BD5C02902A2682A8005AA537 /* EndpointParameters.swift in Sources */,
 				BD5C02AA2A268DD5005AA537 /* MainViewController.swift in Sources */,
 				BD9E50EE2A2D3C1B00996D82 /* SettingsList.swift in Sources */,
+				BDA9022F2A2DBCE1000AA5F9 /* ProfileTableViewCell.swift in Sources */,
 				BD5C029F2A2682C4005AA537 /* EventsStat.swift in Sources */,
 				BD5C028E2A2682A8005AA537 /* NetworkManager.swift in Sources */,
+				BDA902352A2DBF12000AA5F9 /* ProfileViewController.swift in Sources */,
 				BD5C02532A25373A005AA537 /* PreloaderController.swift in Sources */,
 				BD5C028B2A2682A8005AA537 /* Statistics.swift in Sources */,
 				BD5C029E2A2682C4005AA537 /* ScreenModifiersType.swift in Sources */,
@@ -738,6 +786,14 @@
 				kind = branch;
 			};
 		};
+		BDA902312A2DBDBD000AA5F9 /* XCRemoteSwiftPackageReference "ALProgressView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alxrguz/ALProgressView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -760,6 +816,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD5C02A42A26847B005AA537 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		BDA902322A2DBDBD000AA5F9 /* ALProgressView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDA902312A2DBDBD000AA5F9 /* XCRemoteSwiftPackageReference "ALProgressView" */;
+			productName = ALProgressView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

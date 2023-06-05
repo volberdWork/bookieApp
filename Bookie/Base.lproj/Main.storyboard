@@ -181,6 +181,7 @@
                                                             <backgroundConfiguration key="background" image="toAllImage"/>
                                                         </buttonConfiguration>
                                                         <connections>
+                                                            <action selector="liveButtonPressed:" destination="wte-4I-FHj" eventType="touchUpInside" id="bZZ-GQ-Inp"/>
                                                             <action selector="upConingButtonPressed:" destination="wte-4I-FHj" eventType="touchUpInside" id="Lxw-Ro-edu"/>
                                                         </connections>
                                                     </button>
@@ -254,6 +255,7 @@
                                                             <backgroundConfiguration key="background" image="toAllImage"/>
                                                         </buttonConfiguration>
                                                         <connections>
+                                                            <action selector="finishButtonPressed:" destination="wte-4I-FHj" eventType="touchUpInside" id="S5W-W8-jzu"/>
                                                             <action selector="upConingButtonPressed:" destination="wte-4I-FHj" eventType="touchUpInside" id="GT7-Wo-jPo"/>
                                                         </connections>
                                                     </button>
@@ -426,6 +428,70 @@
             </objects>
             <point key="canvasLocation" x="2231.2977099236641" y="686.61971830985919"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="5Gm-5M-ieo">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FLj-uX-die" customClass="ProfileViewController" customModule="Bookie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Njx-0L-ni9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoS-cJ-NUz">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nG4-ab-ngP">
+                                        <rect key="frame" x="0.0" y="48" width="393" height="2"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="TL0-YP-ISC"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXj-8n-NJP">
+                                        <rect key="frame" x="16" y="14.666666666666671" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yXj-8n-NJP" firstAttribute="centerY" secondItem="qoS-cJ-NUz" secondAttribute="centerY" id="Dvx-oF-ceM"/>
+                                    <constraint firstAttribute="height" constant="50" id="Emr-tk-0FT"/>
+                                    <constraint firstItem="nG4-ab-ngP" firstAttribute="leading" secondItem="qoS-cJ-NUz" secondAttribute="leading" id="fdf-5g-IFk"/>
+                                    <constraint firstItem="yXj-8n-NJP" firstAttribute="leading" secondItem="qoS-cJ-NUz" secondAttribute="leading" constant="16" id="lc1-qQ-WAI"/>
+                                    <constraint firstAttribute="bottom" secondItem="nG4-ab-ngP" secondAttribute="bottom" id="mvV-Du-P9f"/>
+                                    <constraint firstAttribute="trailing" secondItem="nG4-ab-ngP" secondAttribute="trailing" id="xbt-Wu-Ftm"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-7w-Mav">
+                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FLj-uX-die" id="CF0-JV-dC5"/>
+                                    <outlet property="delegate" destination="FLj-uX-die" id="ylR-cn-Rck"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0yj-wg-B42"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0yj-wg-B42" firstAttribute="trailing" secondItem="MKh-7w-Mav" secondAttribute="trailing" id="2EM-AQ-ycG"/>
+                            <constraint firstItem="qoS-cJ-NUz" firstAttribute="trailing" secondItem="0yj-wg-B42" secondAttribute="trailing" id="2Xq-QR-BNV"/>
+                            <constraint firstItem="MKh-7w-Mav" firstAttribute="top" secondItem="qoS-cJ-NUz" secondAttribute="bottom" id="bvO-2e-xAH"/>
+                            <constraint firstItem="qoS-cJ-NUz" firstAttribute="leading" secondItem="0yj-wg-B42" secondAttribute="leading" id="jq5-om-T5O"/>
+                            <constraint firstItem="0yj-wg-B42" firstAttribute="bottom" secondItem="MKh-7w-Mav" secondAttribute="bottom" id="pEb-eI-deA"/>
+                            <constraint firstItem="qoS-cJ-NUz" firstAttribute="top" secondItem="0yj-wg-B42" secondAttribute="top" id="wvY-Ht-bqa"/>
+                            <constraint firstItem="MKh-7w-Mav" firstAttribute="leading" secondItem="0yj-wg-B42" secondAttribute="leading" id="yrG-eH-5xV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="MKh-7w-Mav" id="8Hm-7x-E28"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGg-ei-m4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920" y="687"/>
+        </scene>
         <!--Title-->
         <scene sceneID="YWY-MP-gXu">
             <objects>
@@ -529,7 +595,7 @@
         <image name="logoAppImage" width="67.666664123535156" height="14"/>
         <image name="noDataText" width="225.66667175292969" height="81"/>
         <image name="rightIconImage" width="12" height="11.666666984558105"/>
-        <image name="toAllImage" width="120" height="44"/>
+        <image name="toAllImage" width="40" height="14.666666984558105"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

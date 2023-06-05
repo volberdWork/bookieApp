@@ -55,7 +55,8 @@ class MainViewController: UIViewController {
         let liveCellNib = UINib(nibName: "CurrentCollectionViewCell", bundle: nil)
         liveCollectionView.register(liveCellNib, forCellWithReuseIdentifier: "CurrentCollectionViewCell")
         
-        finishCollectionView.register(liveCellNib, forCellWithReuseIdentifier: "CurrentCollectionViewCell")
+        let finishCellNib = UINib(nibName: "CurrentCollectionViewCell", bundle: nil)
+        finishCollectionView.register(finishCellNib, forCellWithReuseIdentifier: "CurrentCollectionViewCell")
         
         
         
@@ -69,6 +70,14 @@ class MainViewController: UIViewController {
         
     }
     
+    @IBAction func liveButtonPressed(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func finishButtonPressed(_ sender: UIButton) {
+        
+        
+    }
 }
 
 
@@ -78,13 +87,34 @@ extension MainViewController : UICollectionViewDelegate{
 
 extension MainViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        switch collectionView {
+        case upcomingCollectionView : return 10
+        case liveCollectionView : return 5
+        case finishCollectionView : return 10
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = upcomingCollectionView.dequeueReusableCell(withReuseIdentifier: "UpcomingCollectionViewCell", for: indexPath) as! UpcomingCollectionViewCell
         
-        return cell
+        
+        switch collectionView {
+        case upcomingCollectionView :
+            let cell = upcomingCollectionView.dequeueReusableCell(withReuseIdentifier: "UpcomingCollectionViewCell", for: indexPath) as! UpcomingCollectionViewCell
+            
+            return cell
+        case liveCollectionView :
+            let cell = liveCollectionView.dequeueReusableCell(withReuseIdentifier: "CurrentCollectionViewCell", for: indexPath) as! CurrentCollectionViewCell
+            
+            return cell
+        case finishCollectionView :
+            let cell = liveCollectionView.dequeueReusableCell(withReuseIdentifier: "CurrentCollectionViewCell", for: indexPath) as! CurrentCollectionViewCell
+            
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
     }
 }
 

@@ -53,6 +53,11 @@ class CurrentCollectionViewCell: UICollectionViewCell {
         awayNameLabel.textColor = .white
         awayNameLabel.font = .displayFont(ofSize: 14, fontType: .SFBold)
         awayNameLabel.textAlignment = .left
+        
+        backgroundImageView.image = UIImage(named: "liveImage")
+        backgroundImageView.contentMode = .scaleToFill
+        
+        baseView.backgroundColor = .clear
     }
     
     
