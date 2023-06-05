@@ -54,6 +54,7 @@
 		BDA902302A2DBCE1000AA5F9 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA9022E2A2DBCE1000AA5F9 /* ProfileTableViewCell.xib */; };
 		BDA902332A2DBDBD000AA5F9 /* ALProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = BDA902322A2DBDBD000AA5F9 /* ALProgressView */; };
 		BDA902352A2DBF12000AA5F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA902342A2DBF12000AA5F9 /* ProfileViewController.swift */; };
+		BDA9023A2A2DC63A000AA5F9 /* SortedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA902392A2DC63A000AA5F9 /* SortedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		BDA9022D2A2DBCE1000AA5F9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		BDA9022E2A2DBCE1000AA5F9 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		BDA902342A2DBF12000AA5F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BDA902392A2DC63A000AA5F9 /* SortedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		BD5C024D2A25373A005AA537 /* Bookie */ = {
 			isa = PBXGroup;
 			children = (
+				BDA902372A2DC621000AA5F9 /* Sorted */,
 				BDA902292A2DBCA1000AA5F9 /* Profile */,
 				BD9E50E22A2D373A00996D82 /* Menu */,
 				BD9E50DE2A2D346C00996D82 /* Preferred */,
@@ -409,6 +412,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		BDA902372A2DC621000AA5F9 /* Sorted */ = {
+			isa = PBXGroup;
+			children = (
+				BDA902382A2DC627000AA5F9 /* Controller */,
+			);
+			path = Sorted;
+			sourceTree = "<group>";
+		};
+		BDA902382A2DC627000AA5F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDA902392A2DC63A000AA5F9 /* SortedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -529,6 +548,7 @@
 				BD5C028D2A2682A8005AA537 /* GameStats.swift in Sources */,
 				BD9E50E12A2D34A200996D82 /* PreferredViewController.swift in Sources */,
 				BD5C028A2A2682A8005AA537 /* InfoBaseRealm.swift in Sources */,
+				BDA9023A2A2DC63A000AA5F9 /* SortedViewController.swift in Sources */,
 				BD5C028F2A2682A8005AA537 /* NetworkingExtensions.swift in Sources */,
 				BD5C02762A253B95005AA537 /* PreloaderCollectionViewCell.swift in Sources */,
 				BD5C029A2A2682C4005AA537 /* FavoritesManager.swift in Sources */,
