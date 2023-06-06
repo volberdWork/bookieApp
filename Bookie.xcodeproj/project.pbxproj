@@ -121,6 +121,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD3244F62A2FA4B700BA95D4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C02AB2A27D25D005AA537 /* Settings */,
+				BD5C02A72A268DAA005AA537 /* MAin */,
+				BD5C026E2A253AD6005AA537 /* Preloader */,
+				BD5C02AF2A27DA8B005AA537 /* Terms */,
+				BD9E50DE2A2D346C00996D82 /* Preferred */,
+				BD9E50E22A2D373A00996D82 /* Menu */,
+				BDA902292A2DBCA1000AA5F9 /* Profile */,
+				BDA902372A2DC621000AA5F9 /* Sorted */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		BD5C02422A25373A005AA537 = {
 			isa = PBXGroup;
 			children = (
@@ -140,18 +155,11 @@
 		BD5C024D2A25373A005AA537 /* Bookie */ = {
 			isa = PBXGroup;
 			children = (
-				BDA902372A2DC621000AA5F9 /* Sorted */,
-				BDA902292A2DBCA1000AA5F9 /* Profile */,
-				BD9E50E22A2D373A00996D82 /* Menu */,
-				BD9E50DE2A2D346C00996D82 /* Preferred */,
-				BD5C02AF2A27DA8B005AA537 /* Terms */,
-				BD5C02802A268295005AA537 /* Models */,
+				BD3244F62A2FA4B700BA95D4 /* Modules */,
+				BD5C02802A268295005AA537 /* Model */,
 				BD5C027D2A253CF1005AA537 /* Fonts */,
 				BD5C02782A253C56005AA537 /* Application */,
 				BD5C026B2A253963005AA537 /* Extensions */,
-				BD5C026E2A253AD6005AA537 /* Preloader */,
-				BD5C02A72A268DAA005AA537 /* MAin */,
-				BD5C02AB2A27D25D005AA537 /* Settings */,
 				BD5C02542A25373A005AA537 /* Main.storyboard */,
 				BD5C02572A25373C005AA537 /* Assets.xcassets */,
 				BD5C02592A25373C005AA537 /* LaunchScreen.storyboard */,
@@ -222,13 +230,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		BD5C02802A268295005AA537 /* Models */ = {
+		BD5C02802A268295005AA537 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				BD5C02832A2682A7005AA537 /* NetworkingService */,
 				BD5C02812A2682A7005AA537 /* Relm Model */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BD5C02812A2682A7005AA537 /* Relm Model */ = {
