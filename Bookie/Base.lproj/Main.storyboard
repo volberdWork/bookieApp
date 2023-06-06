@@ -390,6 +390,47 @@
             </objects>
             <point key="canvasLocation" x="2173.2824427480914" y="-2.1126760563380285"/>
         </scene>
+        <!--All Events View Controller-->
+        <scene sceneID="uzC-p6-27f">
+            <objects>
+                <viewController storyboardIdentifier="AllEventsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z9C-Dl-bH6" customClass="AllEventsViewController" customModule="Bookie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b1N-xm-QbG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SbT-oH-rQX">
+                                <rect key="frame" x="0.0" y="91" width="393" height="761"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f9e-l7-1Fn">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="z9C-Dl-bH6" id="Qkh-qd-78j"/>
+                                    <outlet property="delegate" destination="z9C-Dl-bH6" id="ejB-hb-Up0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s7b-QR-PSs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="SbT-oH-rQX" secondAttribute="bottom" id="1Wy-Hh-ZMw"/>
+                            <constraint firstItem="SbT-oH-rQX" firstAttribute="top" secondItem="s7b-QR-PSs" secondAttribute="top" constant="32" id="JF6-kg-UbP"/>
+                            <constraint firstItem="s7b-QR-PSs" firstAttribute="trailing" secondItem="SbT-oH-rQX" secondAttribute="trailing" id="njM-wa-C9X"/>
+                            <constraint firstItem="SbT-oH-rQX" firstAttribute="leading" secondItem="s7b-QR-PSs" secondAttribute="leading" id="tac-zc-3hW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="SbT-oH-rQX" id="h7s-7j-oui"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6SS-zy-cdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313.7404580152672" y="688.73239436619724"/>
+        </scene>
         <!--Preferred View Controller-->
         <scene sceneID="Eho-zw-fnr">
             <objects>

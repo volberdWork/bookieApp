@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD3244FA2A2FA60500BA95D4 /* AllEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3244F92A2FA60500BA95D4 /* AllEventsViewController.swift */; };
+		BD3244FF2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3244FD2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift */; };
+		BD3245002A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD3244FE2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib */; };
 		BD5C024F2A25373A005AA537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C024E2A25373A005AA537 /* AppDelegate.swift */; };
 		BD5C02512A25373A005AA537 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02502A25373A005AA537 /* SceneDelegate.swift */; };
 		BD5C02532A25373A005AA537 /* PreloaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02522A25373A005AA537 /* PreloaderController.swift */; };
@@ -58,6 +61,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD3244F92A2FA60500BA95D4 /* AllEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsViewController.swift; sourceTree = "<group>"; };
+		BD3244FD2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD3244FE2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllEventsCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD5C024B2A25373A005AA537 /* Bookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5C024E2A25373A005AA537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD5C02502A25373A005AA537 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 		BD3244F62A2FA4B700BA95D4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BD3244F72A2FA5E300BA95D4 /* AllEvents */,
 				BD5C02AB2A27D25D005AA537 /* Settings */,
 				BD5C02A72A268DAA005AA537 /* MAin */,
 				BD5C026E2A253AD6005AA537 /* Preloader */,
@@ -134,6 +141,40 @@
 				BDA902372A2DC621000AA5F9 /* Sorted */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		BD3244F72A2FA5E300BA95D4 /* AllEvents */ = {
+			isa = PBXGroup;
+			children = (
+				BD3244FB2A2FA70200BA95D4 /* View */,
+				BD3244F82A2FA5EF00BA95D4 /* Controller */,
+			);
+			path = AllEvents;
+			sourceTree = "<group>";
+		};
+		BD3244F82A2FA5EF00BA95D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD3244F92A2FA60500BA95D4 /* AllEventsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD3244FB2A2FA70200BA95D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD3244FC2A2FA71200BA95D4 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD3244FC2A2FA71200BA95D4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD3244FD2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift */,
+				BD3244FE2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		BD5C02422A25373A005AA537 = {
@@ -516,6 +557,7 @@
 				BD82E51D2A2BC147005EEF71 /* UpcomingCollectionViewCell.xib in Resources */,
 				BD5C02582A25373C005AA537 /* Assets.xcassets in Resources */,
 				BD5C027B2A253CC3005AA537 /* SFPRODISPLAYBOLD.OTF in Resources */,
+				BD3245002A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib in Resources */,
 				BD5C02562A25373A005AA537 /* Main.storyboard in Resources */,
 				BDA902302A2DBCE1000AA5F9 /* ProfileTableViewCell.xib in Resources */,
 			);
@@ -549,8 +591,10 @@
 				BD9E50E82A2D377E00996D82 /* SettingsTableViewCell.swift in Sources */,
 				BD5C029D2A2682C4005AA537 /* FavoriteTeam.swift in Sources */,
 				BD5C028C2A2682A8005AA537 /* LiveDataBuffer.swift in Sources */,
+				BD3244FA2A2FA60500BA95D4 /* AllEventsViewController.swift in Sources */,
 				BD82E51C2A2BC147005EEF71 /* UpcomingCollectionViewCell.swift in Sources */,
 				BD5C027F2A253D75005AA537 /* UIFont+ProDisplay.swift in Sources */,
+				BD3244FF2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift in Sources */,
 				BD5C02992A2682C4005AA537 /* PlayerStatistic.swift in Sources */,
 				BD5C026D2A25398C005AA537 /* UIColor+extension.swift in Sources */,
 				BD5C028D2A2682A8005AA537 /* GameStats.swift in Sources */,

@@ -78,11 +78,20 @@ class MainViewController: UIViewController {
         
         
     }
+    
+    private func openAllEventsScreen(){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = main.instantiateViewController(withIdentifier: "AllEventsViewController") as? AllEventsViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 
 extension MainViewController : UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       openAllEventsScreen()
+    }
 }
 
 extension MainViewController : UICollectionViewDataSource{
