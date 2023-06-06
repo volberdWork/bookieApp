@@ -18,50 +18,50 @@ struct SettingsList {
 }
 
 extension SettingsList{
-    static func getSettingsList()->[SettingsList]{
+    static func getSettingsList()->[[SettingsList]]{
         [
-            SettingsList(
-                leftImageName: "",
+            [SettingsList(
+                leftImageName: "personImage",
                 nameText: SettingsList.ButtonNameLabel.profile,
-                rightImageName: "",
+                rightImageName: "rightImage",
                 switchIsHidden: true
             ),
             SettingsList(
-                leftImageName: "",
+                leftImageName: "heartImage",
                 nameText: SettingsList.ButtonNameLabel.preferred,
-                rightImageName: "",
+                rightImageName: "rightImage",
                 switchIsHidden: true
-            ),
-            SettingsList(
-                leftImageName: "",
+            )],
+            [SettingsList(
+                leftImageName: "bellImage",
                 nameText: SettingsList.ButtonNameLabel.notifications,
                 rightImageName: "",
                 switchIsHidden: false
             ),
             SettingsList(
-                leftImageName: "",
+                leftImageName: "shareImage",
                 nameText: SettingsList.ButtonNameLabel.shareUp,
-                rightImageName: "",
+                rightImageName: "rightImage",
                 switchIsHidden: true
             ),
             SettingsList(
-                leftImageName: "",
+                leftImageName: "starImage",
                 nameText: SettingsList.ButtonNameLabel.rateUs,
-                rightImageName: "",
+                rightImageName: "rightImage",
                 switchIsHidden: true
-            ),
-            SettingsList(
-                leftImageName: "",
+            )],
+            [SettingsList(
+                leftImageName: "lockImage",
                 nameText: SettingsList.ButtonNameLabel.privacy,
-                rightImageName: "",
+                rightImageName: "rightImage",
                 switchIsHidden: true
             ),
             SettingsList(
-                leftImageName: "",
+                leftImageName: "shieldImage",
                 nameText: SettingsList.ButtonNameLabel.terms,
-                rightImageName: "",
+                rightImageName: "rightImage",
                 switchIsHidden: true
-            )
+            )]
         ]
 
     }

@@ -329,8 +329,6 @@
 		BD5C02AB2A27D25D005AA537 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				BD9E50EC2A2D3C0800996D82 /* Model */,
-				BD5C02AC2A27D2A8005AA537 /* Controller */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -397,6 +395,8 @@
 		BD9E50E22A2D373A00996D82 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				BD9E50EC2A2D3C0800996D82 /* Model */,
+				BD5C02AC2A27D2A8005AA537 /* Controller */,
 				BD9E50E42A2D374B00996D82 /* View */,
 			);
 			path = Menu;
