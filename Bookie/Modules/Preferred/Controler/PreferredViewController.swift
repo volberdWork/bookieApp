@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PreferredViewController: UIViewController {
+    
+    private let realm = try? Realm()
+    var arrayOfFavorites: [InfoBaseRealm] = []
 
     @IBOutlet var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -24,7 +28,30 @@ class PreferredViewController: UIViewController {
         
         collectionView.backgroundColor = .customDarkGrey
     }
+    
+    private func setupFavorites() {
+        arrayOfFavorites.removeAll()
 
+        if let infoMatchesResult = realm?.objects(InfoBaseRealm.self) {
+            for match in infoMatchesResult {
+                arrayOfFavorites.append(match)
+            }
+        }
+    }
+
+    func realmDelete(idObjToDel: Int) {
+            do {
+              let realm = try Realm()
+              let object = realm.objects(InfoBaseRealm.self).first
+              try! realm.write {
+                if let obj = object {
+                  realm.delete(obj)
+                }
+              }
+            } catch let error as NSError {
+            }
+          }
+    
 }
 
 extension PreferredViewController : UICollectionViewDataSource{

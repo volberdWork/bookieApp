@@ -36,7 +36,9 @@ class SettingsViewController: UIViewController {
     private func openTermsScreen(text: String){
         let main = UIStoryboard(name: "Main", bundle: nil)
         if let vc = main.instantiateViewController(withIdentifier: "TermsViewController") as? TermsViewController {
+            vc.vc = "terms"
             navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     
