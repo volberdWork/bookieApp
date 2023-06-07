@@ -40,6 +40,20 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    private func openProfileScreen(){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = main.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    private func openPrefferedScreen(){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = main.instantiateViewController(withIdentifier: "PreferredViewController") as? PreferredViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 
 
 }
@@ -111,6 +125,36 @@ extension SettingsViewController: UITableViewDelegate {
         let headerView = UIView()
         headerView.backgroundColor = .yellow
         return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0{
+            if indexPath.row == 0{
+                openProfileScreen()
+            } else{
+                openPrefferedScreen()
+            }
+        }
+        
+        if indexPath.section == 1{
+            if indexPath.row == 0{
+                
+            } else if indexPath.row == 1{
+                
+            } else {
+                
+            }
+        }
+        
+        if indexPath.section == 2{
+            if indexPath.row == 0{
+                openTermsScreen(text: "propolicy")
+            } else{
+                openTermsScreen(text: "terms")
+            }
+        }
+        
+        
     }
 }
 
