@@ -58,6 +58,10 @@
 		BDA902332A2DBDBD000AA5F9 /* ALProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = BDA902322A2DBDBD000AA5F9 /* ALProgressView */; };
 		BDA902352A2DBF12000AA5F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA902342A2DBF12000AA5F9 /* ProfileViewController.swift */; };
 		BDA9023A2A2DC63A000AA5F9 /* SortedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA902392A2DC63A000AA5F9 /* SortedViewController.swift */; };
+		BDD91EC42A30660000900714 /* LineUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD91EC32A30660000900714 /* LineUpViewController.swift */; };
+		BDD91EC62A30661400900714 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD91EC52A30661400900714 /* StandingsViewController.swift */; };
+		BDD91EC82A30662500900714 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD91EC72A30662500900714 /* UpcomingViewController.swift */; };
+		BDD91ECA2A30663A00900714 /* MatchLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD91EC92A30663A00900714 /* MatchLiveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +113,10 @@
 		BDA9022E2A2DBCE1000AA5F9 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		BDA902342A2DBF12000AA5F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BDA902392A2DC63A000AA5F9 /* SortedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedViewController.swift; sourceTree = "<group>"; };
+		BDD91EC32A30660000900714 /* LineUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpViewController.swift; sourceTree = "<group>"; };
+		BDD91EC52A30661400900714 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
+		BDD91EC72A30662500900714 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
+		BDD91EC92A30663A00900714 /* MatchLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchLiveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				BD3244F72A2FA5E300BA95D4 /* AllEvents */,
-				BD5C02AB2A27D25D005AA537 /* Settings */,
 				BD5C02A72A268DAA005AA537 /* MAin */,
 				BD5C026E2A253AD6005AA537 /* Preloader */,
 				BD5C02AF2A27DA8B005AA537 /* Terms */,
@@ -142,7 +149,6 @@
 				BDD91EBB2A3062FB00900714 /* Upcoming */,
 				BDD91EB72A3062D200900714 /* Standings */,
 				BDD91EB32A3062AC00900714 /* LineUp */,
-				BDA902382A2DC627000AA5F9 /* Controller */,
 				BDA902372A2DC621000AA5F9 /* Sorted */,
 			);
 			path = Modules;
@@ -331,13 +337,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		BD5C02AB2A27D25D005AA537 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		BD5C02AC2A27D2A8005AA537 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +468,7 @@
 		BDA902372A2DC621000AA5F9 /* Sorted */ = {
 			isa = PBXGroup;
 			children = (
+				BDA902382A2DC627000AA5F9 /* Controller */,
 			);
 			path = Sorted;
 			sourceTree = "<group>";
@@ -508,6 +508,7 @@
 		BDD91EB62A3062BF00900714 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BDD91EC32A30660000900714 /* LineUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -525,6 +526,7 @@
 		BDD91EB82A3062DA00900714 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BDD91EC52A30661400900714 /* StandingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -563,6 +565,7 @@
 		BDD91EBD2A30630B00900714 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BDD91EC72A30662500900714 /* UpcomingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 		BDD91EC02A30637C00900714 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BDD91EC92A30663A00900714 /* MatchLiveViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -700,6 +704,7 @@
 			files = (
 				BD5C02902A2682A8005AA537 /* EndpointParameters.swift in Sources */,
 				BD5C02AA2A268DD5005AA537 /* MainViewController.swift in Sources */,
+				BDD91EC62A30661400900714 /* StandingsViewController.swift in Sources */,
 				BD9E50EE2A2D3C1B00996D82 /* SettingsList.swift in Sources */,
 				BDA9022F2A2DBCE1000AA5F9 /* ProfileTableViewCell.swift in Sources */,
 				BD5C029F2A2682C4005AA537 /* EventsStat.swift in Sources */,
@@ -709,6 +714,7 @@
 				BD5C028B2A2682A8005AA537 /* Statistics.swift in Sources */,
 				BD5C029E2A2682C4005AA537 /* ScreenModifiersType.swift in Sources */,
 				BD82E5212A2BD1D3005EEF71 /* CurrentCollectionViewCell.swift in Sources */,
+				BDD91EC82A30662500900714 /* UpcomingViewController.swift in Sources */,
 				BD5C024F2A25373A005AA537 /* AppDelegate.swift in Sources */,
 				BD5C02A02A2682C4005AA537 /* TeamStatistic.swift in Sources */,
 				BD5C02B22A27DAA8005AA537 /* TermsViewController.swift in Sources */,
@@ -721,6 +727,7 @@
 				BD5C028C2A2682A8005AA537 /* LiveDataBuffer.swift in Sources */,
 				BD3244FA2A2FA60500BA95D4 /* AllEventsViewController.swift in Sources */,
 				BD82E51C2A2BC147005EEF71 /* UpcomingCollectionViewCell.swift in Sources */,
+				BDD91ECA2A30663A00900714 /* MatchLiveViewController.swift in Sources */,
 				BD5C027F2A253D75005AA537 /* UIFont+ProDisplay.swift in Sources */,
 				BD3244FF2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift in Sources */,
 				BD5C02992A2682C4005AA537 /* PlayerStatistic.swift in Sources */,
@@ -731,6 +738,7 @@
 				BDA9023A2A2DC63A000AA5F9 /* SortedViewController.swift in Sources */,
 				BD5C028F2A2682A8005AA537 /* NetworkingExtensions.swift in Sources */,
 				BD5C02762A253B95005AA537 /* PreloaderCollectionViewCell.swift in Sources */,
+				BDD91EC42A30660000900714 /* LineUpViewController.swift in Sources */,
 				BD5C029A2A2682C4005AA537 /* FavoritesManager.swift in Sources */,
 				BD5C02AE2A27D2C1005AA537 /* SettingsViewController.swift in Sources */,
 			);
