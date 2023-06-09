@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import MessageUI
+import StoreKit
 
 class SettingsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
@@ -56,7 +58,31 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    @objc func shareApp() {
+        let textToShare = "Awesome app Estrela"
+        if let urlStr = NSURL(string: "https://apps.apple.com") {
+            let objectsToShare = [textToShare, urlStr] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
 
+    private func rateAppAction() {
+        
+        //check status of user OS
+        if #available(iOS 14.0, *) {
+            //request review in another situation
+            if let sceneNew = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                SKStoreReviewController.requestReview(in: sceneNew)
+            }
+            
+        } else {
+            
+            //request review
+            SKStoreReviewController.requestReview()
+        }
+    }
 
 }
 
@@ -140,11 +166,11 @@ extension SettingsViewController: UITableViewDelegate {
         
         if indexPath.section == 1{
             if indexPath.row == 0{
-                
+                print("notification")
             } else if indexPath.row == 1{
-                
+                shareApp()
             } else {
-                
+                rateAppAction()
             }
         }
         

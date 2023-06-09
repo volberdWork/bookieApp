@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2CFF722A325D85007F3AA2 /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2CFF702A325D85007F3AA2 /* UpcomingTableViewCell.swift */; };
+		BD2CFF732A325D85007F3AA2 /* UpcomingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2CFF712A325D85007F3AA2 /* UpcomingTableViewCell.xib */; };
 		BD3244FA2A2FA60500BA95D4 /* AllEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3244F92A2FA60500BA95D4 /* AllEventsViewController.swift */; };
 		BD3244FF2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3244FD2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift */; };
 		BD3245002A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD3244FE2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib */; };
@@ -62,9 +64,15 @@
 		BDD91EC62A30661400900714 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD91EC52A30661400900714 /* StandingsViewController.swift */; };
 		BDD91EC82A30662500900714 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD91EC72A30662500900714 /* UpcomingViewController.swift */; };
 		BDD91ECA2A30663A00900714 /* MatchLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD91EC92A30663A00900714 /* MatchLiveViewController.swift */; };
+		BDD91ECE2A306C8100900714 /* UniversalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD91ECC2A306C8100900714 /* UniversalTableViewCell.swift */; };
+		BDD91ECF2A306C8100900714 /* UniversalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD91ECD2A306C8100900714 /* UniversalTableViewCell.xib */; };
+		BDD91ED32A31255700900714 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD91ED12A31255700900714 /* MatchTableViewCell.swift */; };
+		BDD91ED42A31255700900714 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD91ED22A31255700900714 /* MatchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD2CFF702A325D85007F3AA2 /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
+		BD2CFF712A325D85007F3AA2 /* UpcomingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingTableViewCell.xib; sourceTree = "<group>"; };
 		BD3244F92A2FA60500BA95D4 /* AllEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsViewController.swift; sourceTree = "<group>"; };
 		BD3244FD2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD3244FE2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllEventsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -117,6 +125,10 @@
 		BDD91EC52A30661400900714 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 		BDD91EC72A30662500900714 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		BDD91EC92A30663A00900714 /* MatchLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchLiveViewController.swift; sourceTree = "<group>"; };
+		BDD91ECC2A306C8100900714 /* UniversalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalTableViewCell.swift; sourceTree = "<group>"; };
+		BDD91ECD2A306C8100900714 /* UniversalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversalTableViewCell.xib; sourceTree = "<group>"; };
+		BDD91ED12A31255700900714 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		BDD91ED22A31255700900714 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD2CFF6F2A325D71007F3AA2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD2CFF702A325D85007F3AA2 /* UpcomingTableViewCell.swift */,
+				BD2CFF712A325D85007F3AA2 /* UpcomingTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		BD3244F62A2FA4B700BA95D4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +562,7 @@
 		BDD91EBA2A3062E700900714 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDD91ECB2A306C6500900714 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -573,6 +595,7 @@
 		BDD91EBE2A30631200900714 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD2CFF6F2A325D71007F3AA2 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -598,6 +621,7 @@
 		BDD91EC12A30638100900714 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDD91ED02A31254100900714 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -607,6 +631,24 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BDD91ECB2A306C6500900714 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD91ECC2A306C8100900714 /* UniversalTableViewCell.swift */,
+				BDD91ECD2A306C8100900714 /* UniversalTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BDD91ED02A31254100900714 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD91ED12A31255700900714 /* MatchTableViewCell.swift */,
+				BDD91ED22A31255700900714 /* MatchTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -684,12 +726,15 @@
 				BD82E5222A2BD1D3005EEF71 /* CurrentCollectionViewCell.xib in Resources */,
 				BD5C027C2A253CC3005AA537 /* SFPRODISPLAYMEDIUM.OTF in Resources */,
 				BD5C025B2A25373C005AA537 /* LaunchScreen.storyboard in Resources */,
+				BD2CFF732A325D85007F3AA2 /* UpcomingTableViewCell.xib in Resources */,
 				BD9E50E92A2D377E00996D82 /* SettingsTableViewCell.xib in Resources */,
 				BD5C02772A253B95005AA537 /* PreloaderCollectionViewCell.xib in Resources */,
 				BD82E51D2A2BC147005EEF71 /* UpcomingCollectionViewCell.xib in Resources */,
 				BD5C02582A25373C005AA537 /* Assets.xcassets in Resources */,
+				BDD91ECF2A306C8100900714 /* UniversalTableViewCell.xib in Resources */,
 				BD5C027B2A253CC3005AA537 /* SFPRODISPLAYBOLD.OTF in Resources */,
 				BD3245002A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib in Resources */,
+				BDD91ED42A31255700900714 /* MatchTableViewCell.xib in Resources */,
 				BD5C02562A25373A005AA537 /* Main.storyboard in Resources */,
 				BDA902302A2DBCE1000AA5F9 /* ProfileTableViewCell.xib in Resources */,
 			);
@@ -708,11 +753,13 @@
 				BD9E50EE2A2D3C1B00996D82 /* SettingsList.swift in Sources */,
 				BDA9022F2A2DBCE1000AA5F9 /* ProfileTableViewCell.swift in Sources */,
 				BD5C029F2A2682C4005AA537 /* EventsStat.swift in Sources */,
+				BDD91ED32A31255700900714 /* MatchTableViewCell.swift in Sources */,
 				BD5C028E2A2682A8005AA537 /* NetworkManager.swift in Sources */,
 				BDA902352A2DBF12000AA5F9 /* ProfileViewController.swift in Sources */,
 				BD5C02532A25373A005AA537 /* PreloaderController.swift in Sources */,
 				BD5C028B2A2682A8005AA537 /* Statistics.swift in Sources */,
 				BD5C029E2A2682C4005AA537 /* ScreenModifiersType.swift in Sources */,
+				BDD91ECE2A306C8100900714 /* UniversalTableViewCell.swift in Sources */,
 				BD82E5212A2BD1D3005EEF71 /* CurrentCollectionViewCell.swift in Sources */,
 				BDD91EC82A30662500900714 /* UpcomingViewController.swift in Sources */,
 				BD5C024F2A25373A005AA537 /* AppDelegate.swift in Sources */,
@@ -731,6 +778,7 @@
 				BD5C027F2A253D75005AA537 /* UIFont+ProDisplay.swift in Sources */,
 				BD3244FF2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift in Sources */,
 				BD5C02992A2682C4005AA537 /* PlayerStatistic.swift in Sources */,
+				BD2CFF722A325D85007F3AA2 /* UpcomingTableViewCell.swift in Sources */,
 				BD5C026D2A25398C005AA537 /* UIColor+extension.swift in Sources */,
 				BD5C028D2A2682A8005AA537 /* GameStats.swift in Sources */,
 				BD9E50E12A2D34A200996D82 /* PreferredViewController.swift in Sources */,

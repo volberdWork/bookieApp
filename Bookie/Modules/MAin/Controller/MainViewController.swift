@@ -45,6 +45,19 @@ class MainViewController: UIViewController {
         finishedLabel.textColor = .white
     }
     
+    private func openAllEventsScreen(){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = main.instantiateViewController(withIdentifier: "AllEventsViewController") as? AllEventsViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    private func openUpcomingScreen(){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = main.instantiateViewController(withIdentifier: "UpcomingViewController") as? UpcomingViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
     private func configureCollectionViews(){
         
@@ -67,30 +80,28 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func upConingButtonPressed(_ sender: UIButton) {
+        openAllEventsScreen()
         
     }
     
     @IBAction func liveButtonPressed(_ sender: UIButton) {
+        openAllEventsScreen()
     }
     
     
     @IBAction func finishButtonPressed(_ sender: UIButton) {
         
-        
+        openAllEventsScreen()
     }
     
-    private func openAllEventsScreen(){
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = main.instantiateViewController(withIdentifier: "AllEventsViewController") as? AllEventsViewController {
-            navigationController?.pushViewController(vc, animated: true)
-        }
-    }
+   
 }
 
 
 extension MainViewController : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       openAllEventsScreen()
+//       openAllEventsScreen()
+        openUpcomingScreen()
     }
 }
 
