@@ -10,4 +10,7 @@ class InfoBaseRealm: Object{
     @Persisted var homeLogoLink: String
     @Persisted var awayLogoLink: String
     @Persisted var yearText: String
+    @Persisted var homeGoal: Int
+    @Persisted var awayGoal: Int
+    @Persisted var plase: String
 }

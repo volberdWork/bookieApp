@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class UpcomingViewController: UIViewController {
+    
+    var upCellBase: [Response] = []
+    
+    private let realm = try? Realm()
+    private var arrayOfFavorites: [InfoBaseRealm] = []
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var awayWinButton: UIButton!
@@ -24,6 +30,7 @@ class UpcomingViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupFavorites()
         registerCell()
         congigureView()
     }
@@ -35,7 +42,66 @@ class UpcomingViewController: UIViewController {
         tableView.register(UINib(nibName: "UpcomingTableViewCell", bundle: nil), forCellReuseIdentifier: "UpcomingTableViewCell")
     }
     
+    @objc func squareArrowUpButtonTapped(){
+        if let home = upCellBase.first?.teams?.home?.name, let away = upCellBase.first?.teams?.away?.name  {
+            let textToShare = "Look, this teams will play together: \(home) VS \(away)"
+            let objectsToShare = [textToShare] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+            self.present(activityVC, animated: true, completion: nil)
+        }
+
+    }
+    
+    @objc func heartButtonTapped(){
+        
+       
+
+ 
+        let data = self.upCellBase.first
+        let infoBaseRealm = InfoBaseRealm()
+        infoBaseRealm.gameId = data?.fixture?.id ?? 0
+        infoBaseRealm.date = data?.fixture?.date ?? ""
+        infoBaseRealm.homaName = data?.teams?.home?.name ?? ""
+        infoBaseRealm.awayName = data?.teams?.away?.name ?? ""
+        infoBaseRealm.homeLogoLink = data?.teams?.home?.logo ?? ""
+        infoBaseRealm.awayLogoLink = data?.teams?.away?.logo ?? ""
+        infoBaseRealm.homeGoal = data?.goals?.home ?? 0
+        infoBaseRealm.awayGoal = data?.goals?.away ?? 0
+        infoBaseRealm.plase = "\(data?.fixture?.venue?.city ?? ""), \(data?.fixture?.venue?.name ?? "")"
+        
+        
+        
+        try? self.realm?.write{
+            self.realm?.add(infoBaseRealm, update: .all)
+            self.realm?.refresh()
+        }
+        
+       
+    }
+    
+    private func setupFavorites() {
+        arrayOfFavorites.removeAll()
+        
+        if let infoMatchesResult = realm?.objects(InfoBaseRealm.self) {
+            for match in infoMatchesResult {
+                arrayOfFavorites.append(match)
+            }
+        }
+    }
+    
     private func congigureView(){
+        // Создание кнопки square.and.arrow.up
+        let squareArrowUpButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(squareArrowUpButtonTapped))
+
+        // Создание кнопки heart
+       
+        let heartButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(heartButtonTapped))
+
+        // Добавление кнопок на navigationBar
+        navigationItem.rightBarButtonItems = [squareArrowUpButton, heartButton]
+
+        
         self.view.backgroundColor = .customDarkGrey
         collectionView.backgroundColor = .clear
         
@@ -111,7 +177,7 @@ extension UpcomingViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CurrentCollectionViewCell", for: indexPath) as! CurrentCollectionViewCell
-        
+        cell.setupCell(model: upCellBase[indexPath.row])
         return cell
     }
     

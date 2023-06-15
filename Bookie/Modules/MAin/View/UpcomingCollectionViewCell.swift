@@ -24,27 +24,70 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
         backgroundImage.image = UIImage(named: "upcomingImage")
         
         typeLabel.textColor = .customYellow
-        typeLabel.font = .displayFont(ofSize: 25, fontType: .SFBold)
+        typeLabel.font = .displayFont(ofSize: 17, fontType: .SFBold)
         
         timeLabel.textColor = .white
-        timeLabel.font = .displayFont(ofSize: 25, fontType: .SFBold)
+        timeLabel.font = .displayFont(ofSize: 17, fontType: .SFBold)
         timeLabel.textAlignment = .left
         
         homeTeamLabel.textColor = .white
-        homeTeamLabel.font = .displayFont(ofSize: 25, fontType: .SFBold)
+        homeTeamLabel.font = .displayFont(ofSize: 17, fontType: .SFBold)
         homeTeamLabel.textAlignment = .left
         
         awayTeamLabel.textColor = .white
-        awayTeamLabel.font = .displayFont(ofSize: 25, fontType: .SFBold)
+        awayTeamLabel.font = .displayFont(ofSize: 17, fontType: .SFBold)
         awayTeamLabel.textAlignment = .left
         
         baseVIew.backgroundColor = .clear
         
         
+        
     }
     
-    func setupCell(model: String){
+    func convertDateFormat(_ dateString: String) -> String? {
+        let inputDateFormatter = DateFormatter()
+        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         
+        let outputDateFormatter = DateFormatter()
+        outputDateFormatter.dateFormat = "HH:mm dd/MM/yyyy"
+        
+        if let date = inputDateFormatter.date(from: dateString) {
+            let formattedDate = outputDateFormatter.string(from: date)
+            return formattedDate
+        } else {
+            return nil // В случае ошибки возвращаем nil
+        }
+    }
+    
+    func setupCell(model: Response){
+      
+       var fullText = convertDateFormat(model.fixture?.date ?? "")
+        timeLabel.text = fullText
+        typeLabel.text = model.fixture?.status?.short ?? ""
+ 
+        let attributedString = NSMutableAttributedString(string: fullText ?? "")
+
+        // Устанавливаем стиль для первых пяти символов
+        let boldAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.displayFont(ofSize: 17, fontType: .SFBold)
+        ]
+        let range = NSRange(location: 0, length: min(5, fullText!.count))
+        attributedString.addAttributes(boldAttributes, range: range)
+
+        // Устанавливаем стиль для остальных символов
+        let mediumAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.displayFont(ofSize: 17, fontType: .SFMedium)
+        ]
+        let remainingRange = NSRange(location: range.length, length: fullText!.count - range.length)
+        attributedString.addAttributes(mediumAttributes, range: remainingRange)
+
+        // Применяем атрибутированную строку к вашему UILabel
+        
+        timeLabel.attributedText = attributedString
+        
+        
+        homeTeamLabel.text = model.teams?.home?.name ?? ""
+        awayTeamLabel.text = model.teams?.away?.name ?? ""
     }
 
 }

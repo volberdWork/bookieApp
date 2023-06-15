@@ -17,6 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookgif.gif" translatesAutoresizingMaskIntoConstraints="NO" id="pxN-gP-jek">
+                                <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="8kG-FL-6tP"/>
+                                    <constraint firstAttribute="width" constant="300" id="GTb-Us-5eq"/>
+                                </constraints>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lWx-nh-rEm">
                                 <rect key="frame" x="0.0" y="183.33333333333334" width="393" height="485.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -27,6 +34,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Xpx-r2-RZd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pHc-rW-2fX"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQp-Kh-gtj">
                                 <rect key="frame" x="118" y="700" width="157" height="44"/>
@@ -57,11 +68,14 @@
                             <constraint firstItem="oQp-Kh-gtj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="dtC-0l-qsD"/>
                             <constraint firstItem="djD-df-r8t" firstAttribute="top" secondItem="oQp-Kh-gtj" secondAttribute="bottom" constant="16" id="h88-P2-x5y"/>
                             <constraint firstItem="lWx-nh-rEm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.57" id="lzu-ba-Q2c"/>
+                            <constraint firstItem="pxN-gP-jek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qOi-PC-3gP"/>
                             <constraint firstItem="oQp-Kh-gtj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qri-NG-j8N"/>
+                            <constraint firstItem="pxN-gP-jek" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wTn-ka-zEY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="lWx-nh-rEm" id="sp6-rZ-4QH"/>
+                        <outlet property="gifImage" destination="pxN-gP-jek" id="iAA-oG-WHx"/>
                         <outlet property="pageControl" destination="djD-df-r8t" id="6iW-0m-lQq"/>
                         <outlet property="startButton" destination="oQp-Kh-gtj" id="uEi-jc-CtD"/>
                     </connections>
@@ -554,13 +568,54 @@
                     <view key="view" contentMode="scaleToFill" id="AzA-uN-TAm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MPB-EF-yr8">
+                                <rect key="frame" x="0.0" y="64" width="393" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wBz-bP-yvH" id="1MI-2w-4CO"/>
+                                    <outlet property="delegate" destination="wBz-bP-yvH" id="DWe-Fy-i2b"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XR3-0B-tJH">
+                                <rect key="frame" x="16" y="16" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="S5h-Z8-V49"/>
+                                    <constraint firstAttribute="width" constant="44" id="iQk-rA-r9V"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cancelImage">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqz-6e-JeQ">
+                                <rect key="frame" x="175.66666666666666" y="16" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OQk-Fs-5hT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MPB-EF-yr8" firstAttribute="top" secondItem="XR3-0B-tJH" secondAttribute="bottom" constant="4" id="Iyu-y4-6nc"/>
+                            <constraint firstItem="lqz-6e-JeQ" firstAttribute="top" secondItem="OQk-Fs-5hT" secondAttribute="top" constant="16" id="Jr5-fl-nDf"/>
+                            <constraint firstItem="XR3-0B-tJH" firstAttribute="top" secondItem="OQk-Fs-5hT" secondAttribute="top" constant="16" id="TSJ-Ym-d5n"/>
+                            <constraint firstItem="lqz-6e-JeQ" firstAttribute="centerX" secondItem="AzA-uN-TAm" secondAttribute="centerX" id="ag8-z3-o51"/>
+                            <constraint firstItem="OQk-Fs-5hT" firstAttribute="bottom" secondItem="MPB-EF-yr8" secondAttribute="bottom" id="bNA-ZC-r9x"/>
+                            <constraint firstItem="MPB-EF-yr8" firstAttribute="leading" secondItem="OQk-Fs-5hT" secondAttribute="leading" id="kGH-hO-5YJ"/>
+                            <constraint firstItem="OQk-Fs-5hT" firstAttribute="trailing" secondItem="MPB-EF-yr8" secondAttribute="trailing" id="lkM-WC-aTd"/>
+                            <constraint firstItem="XR3-0B-tJH" firstAttribute="leading" secondItem="OQk-Fs-5hT" secondAttribute="leading" constant="16" id="wkE-es-A70"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="MPB-EF-yr8" id="05j-L0-VCc"/>
+                        <outlet property="titleCont" destination="lqz-6e-JeQ" id="k2N-0b-Rbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AR-0B-sdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3681" y="689"/>
+            <point key="canvasLocation" x="3680.1526717557249" y="688.73239436619724"/>
         </scene>
         <!--Upcoming View Controller-->
         <scene sceneID="AJh-oc-ZZ5">
@@ -999,6 +1054,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bookgif.gif" width="500" height="500"/>
+        <image name="cancelImage" width="11.333333015441895" height="11.333333015441895"/>
         <image name="leftIconImage" width="14" height="12"/>
         <image name="logoAppImage" width="67.666664123535156" height="14"/>
         <image name="noDataText" width="225.66667175292969" height="81"/>

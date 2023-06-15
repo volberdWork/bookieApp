@@ -4,6 +4,7 @@ class PreloaderController: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet var gifImage: UIImageView!
     @IBOutlet var startButton: UIButton!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var collectionView: UICollectionView!
@@ -11,9 +12,9 @@ class PreloaderController: UIViewController {
     // MARK: - Properties
     
     private let loaderBase = [
-        PreloaderModel(imageName: "logoImage", title: "Your pocket sport & events manager"),
-        PreloaderModel(imageName: "logoImage", title: "Your pocket sport & events manager"),
-        PreloaderModel(imageName: "logoImage", title: "Your pocket sport & events manager")
+        PreloaderModel(imageName: "", title: "Your pocket sport & events manager"),
+        PreloaderModel(imageName: "", title: "Your pocket sport & events manager"),
+        PreloaderModel(imageName: "", title: "Your pocket sport & events manager")
     ]
 
     // MARK: - View Lifecycle
@@ -22,9 +23,17 @@ class PreloaderController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         configureView()
-        configureFlowLayout()
     }
     
+    func loadVC(){
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
+            return
+        }
+        
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .flipHorizontal
+        present(controller, animated: true)
+    }
     // MARK: - Setup
     
     private func setupCollectionView() {
@@ -39,6 +48,8 @@ class PreloaderController: UIViewController {
     }
     
     private func configureView() {
+        gifImage.image = UIImage.gifImageWithName("bookgif")
+        
         view.backgroundColor = .customDarkGrey
         collectionView.backgroundColor = .clear
         
@@ -60,13 +71,8 @@ class PreloaderController: UIViewController {
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        guard let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController else {
-            return
-        }
-        
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .flipHorizontal
-        present(controller, animated: true)
+        configureFlowLayout()
+       loadVC()
     }
     
 }
