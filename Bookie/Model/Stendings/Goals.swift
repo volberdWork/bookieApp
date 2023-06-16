@@ -12,10 +12,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct FixturesLg : Codable {
-	let events : Bool?
-	let lineups : Bool?
-	let statistics_fixtures : Bool?
-	let statistics_players : Bool?
+struct GoalsSt : Codable {
+	let forSt : Int?
+	let against : Int?
 
 }

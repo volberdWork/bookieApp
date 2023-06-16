@@ -15,22 +15,20 @@
 		BD33835C2A390B9900B84738 /* bookgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD33835B2A390B9900B84738 /* bookgif.gif */; };
 		BD33835E2A390D4600B84738 /* GifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33835D2A390D4600B84738 /* GifLoader.swift */; };
 		BD3383602A3A214500B84738 /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33835F2A3A214500B84738 /* GetData.swift */; };
-		BD33836B2A3A52D200B84738 /* Seasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383622A3A52D100B84738 /* Seasons.swift */; };
-		BD33836C2A3A52D200B84738 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383632A3A52D100B84738 /* Parameters.swift */; };
-		BD33836D2A3A52D200B84738 /* Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383642A3A52D100B84738 /* Paging.swift */; };
-		BD33836E2A3A52D200B84738 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383652A3A52D200B84738 /* Country.swift */; };
-		BD33836F2A3A52D200B84738 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383662A3A52D200B84738 /* Response.swift */; };
-		BD3383702A3A52D200B84738 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383672A3A52D200B84738 /* Json4Swift_Base.swift */; };
-		BD3383712A3A52D200B84738 /* Coverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383682A3A52D200B84738 /* Coverage.swift */; };
-		BD3383722A3A52D200B84738 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383692A3A52D200B84738 /* Fixtures.swift */; };
-		BD3383732A3A52D200B84738 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33836A2A3A52D200B84738 /* League.swift */; };
-		BD33837B2A3AC9E400B84738 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33837A2A3AC9E400B84738 /* NotificationService.swift */; };
 		BD3383862A3ACA1500B84738 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = BD3383852A3ACA1500B84738 /* OneSignal */; };
 		BD3383882A3ACA1500B84738 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = BD3383872A3ACA1500B84738 /* OneSignalExtension */; };
 		BD33838C2A3ACACB00B84738 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = BD33838B2A3ACACB00B84738 /* AppsFlyerLib */; };
-		BD33838E2A3ACC9900B84738 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD33838D2A3ACC9900B84738 /* GoogleService-Info.plist */; };
-		BD3383912A3ACCFD00B84738 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BD3383902A3ACCFD00B84738 /* FirebaseAnalytics */; };
-		BD3383932A3ACCFD00B84738 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD3383922A3ACCFD00B84738 /* FirebaseAnalyticsSwift */; };
+		BD3383A02A3B9DF500B84738 /* Standings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383952A3B9DF400B84738 /* Standings.swift */; };
+		BD3383A12A3B9DF500B84738 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383962A3B9DF400B84738 /* Team.swift */; };
+		BD3383A22A3B9DF500B84738 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383972A3B9DF400B84738 /* Response.swift */; };
+		BD3383A32A3B9DF500B84738 /* Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383982A3B9DF500B84738 /* Paging.swift */; };
+		BD3383A42A3B9DF500B84738 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3383992A3B9DF500B84738 /* Goals.swift */; };
+		BD3383A52A3B9DF500B84738 /* All.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33839A2A3B9DF500B84738 /* All.swift */; };
+		BD3383A62A3B9DF500B84738 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33839B2A3B9DF500B84738 /* Home.swift */; };
+		BD3383A72A3B9DF500B84738 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33839C2A3B9DF500B84738 /* Parameters.swift */; };
+		BD3383A82A3B9DF500B84738 /* StandingsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33839D2A3B9DF500B84738 /* StandingsBase.swift */; };
+		BD3383A92A3B9DF500B84738 /* Away.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33839E2A3B9DF500B84738 /* Away.swift */; };
+		BD3383AA2A3B9DF500B84738 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33839F2A3B9DF500B84738 /* League.swift */; };
 		BD5C024F2A25373A005AA537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C024E2A25373A005AA537 /* AppDelegate.swift */; };
 		BD5C02512A25373A005AA537 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02502A25373A005AA537 /* SceneDelegate.swift */; };
 		BD5C02532A25373A005AA537 /* PreloaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C02522A25373A005AA537 /* PreloaderController.swift */; };
@@ -89,20 +87,19 @@
 		BD33835B2A390B9900B84738 /* bookgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bookgif.gif; sourceTree = "<group>"; };
 		BD33835D2A390D4600B84738 /* GifLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifLoader.swift; sourceTree = "<group>"; };
 		BD33835F2A3A214500B84738 /* GetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
-		BD3383622A3A52D100B84738 /* Seasons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seasons.swift; sourceTree = "<group>"; };
-		BD3383632A3A52D100B84738 /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
-		BD3383642A3A52D100B84738 /* Paging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paging.swift; sourceTree = "<group>"; };
-		BD3383652A3A52D200B84738 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		BD3383662A3A52D200B84738 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		BD3383672A3A52D200B84738 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
-		BD3383682A3A52D200B84738 /* Coverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coverage.swift; sourceTree = "<group>"; };
-		BD3383692A3A52D200B84738 /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
-		BD33836A2A3A52D200B84738 /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		BD3383782A3AC9E400B84738 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD33837A2A3AC9E400B84738 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		BD33837C2A3AC9E400B84738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD3383892A3ACA3C00B84738 /* Bookie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bookie.entitlements; sourceTree = "<group>"; };
-		BD33838D2A3ACC9900B84738 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD3383952A3B9DF400B84738 /* Standings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Standings.swift; sourceTree = "<group>"; };
+		BD3383962A3B9DF400B84738 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		BD3383972A3B9DF400B84738 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		BD3383982A3B9DF500B84738 /* Paging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paging.swift; sourceTree = "<group>"; };
+		BD3383992A3B9DF500B84738 /* Goals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
+		BD33839A2A3B9DF500B84738 /* All.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = All.swift; sourceTree = "<group>"; };
+		BD33839B2A3B9DF500B84738 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		BD33839C2A3B9DF500B84738 /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		BD33839D2A3B9DF500B84738 /* StandingsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsBase.swift; sourceTree = "<group>"; };
+		BD33839E2A3B9DF500B84738 /* Away.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Away.swift; sourceTree = "<group>"; };
+		BD33839F2A3B9DF500B84738 /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		BD5C024B2A25373A005AA537 /* Bookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5C024E2A25373A005AA537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD5C02502A25373A005AA537 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,12 +162,10 @@
 				BD33838C2A3ACACB00B84738 /* AppsFlyerLib in Frameworks */,
 				BD5C02A62A26847B005AA537 /* RealmSwift in Frameworks */,
 				BD5C026A2A253777005AA537 /* Kingfisher in Frameworks */,
-				BD3383932A3ACCFD00B84738 /* FirebaseAnalyticsSwift in Frameworks */,
 				BDA902332A2DBDBD000AA5F9 /* ALProgressView in Frameworks */,
 				BD5C02642A25375D005AA537 /* Alamofire in Frameworks */,
 				BD5C02672A25376B005AA537 /* SnapKit in Frameworks */,
 				BD3383862A3ACA1500B84738 /* OneSignal in Frameworks */,
-				BD3383912A3ACCFD00B84738 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,36 +234,28 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		BD3383612A3A52C500B84738 /* League */ = {
+		BD3383942A3B9DE400B84738 /* Stendings */ = {
 			isa = PBXGroup;
 			children = (
-				BD3383652A3A52D200B84738 /* Country.swift */,
-				BD3383682A3A52D200B84738 /* Coverage.swift */,
-				BD3383692A3A52D200B84738 /* Fixtures.swift */,
-				BD3383672A3A52D200B84738 /* Json4Swift_Base.swift */,
-				BD33836A2A3A52D200B84738 /* League.swift */,
-				BD3383642A3A52D100B84738 /* Paging.swift */,
-				BD3383632A3A52D100B84738 /* Parameters.swift */,
-				BD3383662A3A52D200B84738 /* Response.swift */,
-				BD3383622A3A52D100B84738 /* Seasons.swift */,
+				BD33839A2A3B9DF500B84738 /* All.swift */,
+				BD33839E2A3B9DF500B84738 /* Away.swift */,
+				BD3383992A3B9DF500B84738 /* Goals.swift */,
+				BD33839B2A3B9DF500B84738 /* Home.swift */,
+				BD33839D2A3B9DF500B84738 /* StandingsBase.swift */,
+				BD33839F2A3B9DF500B84738 /* League.swift */,
+				BD3383982A3B9DF500B84738 /* Paging.swift */,
+				BD33839C2A3B9DF500B84738 /* Parameters.swift */,
+				BD3383972A3B9DF400B84738 /* Response.swift */,
+				BD3383952A3B9DF400B84738 /* Standings.swift */,
+				BD3383962A3B9DF400B84738 /* Team.swift */,
 			);
-			path = League;
-			sourceTree = "<group>";
-		};
-		BD3383792A3AC9E400B84738 /* OneSignalNotificationServiceExtension */ = {
-			isa = PBXGroup;
-			children = (
-				BD33837A2A3AC9E400B84738 /* NotificationService.swift */,
-				BD33837C2A3AC9E400B84738 /* Info.plist */,
-			);
-			path = OneSignalNotificationServiceExtension;
+			path = Stendings;
 			sourceTree = "<group>";
 		};
 		BD5C02422A25373A005AA537 = {
 			isa = PBXGroup;
 			children = (
 				BD5C024D2A25373A005AA537 /* Bookie */,
-				BD3383792A3AC9E400B84738 /* OneSignalNotificationServiceExtension */,
 				BD5C024C2A25373A005AA537 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -295,7 +282,6 @@
 				BD5C02572A25373C005AA537 /* Assets.xcassets */,
 				BD33835B2A390B9900B84738 /* bookgif.gif */,
 				BD5C02592A25373C005AA537 /* LaunchScreen.storyboard */,
-				BD33838D2A3ACC9900B84738 /* GoogleService-Info.plist */,
 				BD5C025C2A25373C005AA537 /* Info.plist */,
 			);
 			path = Bookie;
@@ -368,7 +354,7 @@
 		BD5C02802A268295005AA537 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD3383612A3A52C500B84738 /* League */,
+				BD3383942A3B9DE400B84738 /* Stendings */,
 				BDE9FC5E2A37AE5A003A4558 /* NetWorking */,
 				BD5C02812A2682A7005AA537 /* Relm Model */,
 			);
@@ -763,8 +749,6 @@
 				BD3383852A3ACA1500B84738 /* OneSignal */,
 				BD3383872A3ACA1500B84738 /* OneSignalExtension */,
 				BD33838B2A3ACACB00B84738 /* AppsFlyerLib */,
-				BD3383902A3ACCFD00B84738 /* FirebaseAnalytics */,
-				BD3383922A3ACCFD00B84738 /* FirebaseAnalyticsSwift */,
 			);
 			productName = Bookie;
 			productReference = BD5C024B2A25373A005AA537 /* Bookie.app */;
@@ -805,7 +789,6 @@
 				BDA902312A2DBDBD000AA5F9 /* XCRemoteSwiftPackageReference "ALProgressView" */,
 				BD3383842A3ACA1500B84738 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 				BD33838A2A3ACACB00B84738 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
-				BD33838F2A3ACCFD00B84738 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = BD5C024C2A25373A005AA537 /* Products */;
 			projectDirPath = "";
@@ -835,7 +818,6 @@
 				BD5C025B2A25373C005AA537 /* LaunchScreen.storyboard in Resources */,
 				BD2CFF732A325D85007F3AA2 /* UpcomingTableViewCell.xib in Resources */,
 				BD9E50E92A2D377E00996D82 /* SettingsTableViewCell.xib in Resources */,
-				BD33838E2A3ACC9900B84738 /* GoogleService-Info.plist in Resources */,
 				BD5C02772A253B95005AA537 /* PreloaderCollectionViewCell.xib in Resources */,
 				BD82E51D2A2BC147005EEF71 /* UpcomingCollectionViewCell.xib in Resources */,
 				BD5C02582A25373C005AA537 /* Assets.xcassets in Resources */,
@@ -856,7 +838,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD33837B2A3AC9E400B84738 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,9 +849,10 @@
 				BDD91EC62A30661400900714 /* StandingsViewController.swift in Sources */,
 				BD9E50EE2A2D3C1B00996D82 /* SettingsList.swift in Sources */,
 				BD33835E2A390D4600B84738 /* GifLoader.swift in Sources */,
+				BD3383A32A3B9DF500B84738 /* Paging.swift in Sources */,
 				BDA9022F2A2DBCE1000AA5F9 /* ProfileTableViewCell.swift in Sources */,
-				BD3383732A3A52D200B84738 /* League.swift in Sources */,
-				BD3383722A3A52D200B84738 /* Fixtures.swift in Sources */,
+				BD3383A02A3B9DF500B84738 /* Standings.swift in Sources */,
+				BD3383A72A3B9DF500B84738 /* Parameters.swift in Sources */,
 				BDD91ED32A31255700900714 /* MatchTableViewCell.swift in Sources */,
 				BDA902352A2DBF12000AA5F9 /* ProfileViewController.swift in Sources */,
 				BD5C02532A25373A005AA537 /* PreloaderController.swift in Sources */,
@@ -879,34 +861,35 @@
 				BDE9FC692A37B185003A4558 /* SortedTableViewCell.swift in Sources */,
 				BD82E5212A2BD1D3005EEF71 /* CurrentCollectionViewCell.swift in Sources */,
 				BDD91EC82A30662500900714 /* UpcomingViewController.swift in Sources */,
-				BD3383702A3A52D200B84738 /* Json4Swift_Base.swift in Sources */,
-				BD33836B2A3A52D200B84738 /* Seasons.swift in Sources */,
+				BD3383A12A3B9DF500B84738 /* Team.swift in Sources */,
 				BD5C024F2A25373A005AA537 /* AppDelegate.swift in Sources */,
+				BD3383A22A3B9DF500B84738 /* Response.swift in Sources */,
+				BD3383A62A3B9DF500B84738 /* Home.swift in Sources */,
 				BD5C02B22A27DAA8005AA537 /* TermsViewController.swift in Sources */,
 				BD5C02722A253B05005AA537 /* PreloaderModel.swift in Sources */,
 				BD5C02512A25373A005AA537 /* SceneDelegate.swift in Sources */,
 				BD9E50E82A2D377E00996D82 /* SettingsTableViewCell.swift in Sources */,
-				BD33836F2A3A52D200B84738 /* Response.swift in Sources */,
+				BD3383AA2A3B9DF500B84738 /* League.swift in Sources */,
 				BDE9FC632A37AE5A003A4558 /* EventsBase.swift in Sources */,
 				BD3244FA2A2FA60500BA95D4 /* AllEventsViewController.swift in Sources */,
 				BD82E51C2A2BC147005EEF71 /* UpcomingCollectionViewCell.swift in Sources */,
-				BD3383712A3A52D200B84738 /* Coverage.swift in Sources */,
+				BD3383A82A3B9DF500B84738 /* StandingsBase.swift in Sources */,
 				BDD91ECA2A30663A00900714 /* MatchLiveViewController.swift in Sources */,
 				BD5C027F2A253D75005AA537 /* UIFont+ProDisplay.swift in Sources */,
 				BD3244FF2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift in Sources */,
 				BDE9FC622A37AE5A003A4558 /* FixturesBaseModel.swift in Sources */,
-				BD33836E2A3A52D200B84738 /* Country.swift in Sources */,
 				BD2CFF722A325D85007F3AA2 /* UpcomingTableViewCell.swift in Sources */,
 				BD5C026D2A25398C005AA537 /* UIColor+extension.swift in Sources */,
 				BD9E50E12A2D34A200996D82 /* PreferredViewController.swift in Sources */,
+				BD3383A52A3B9DF500B84738 /* All.swift in Sources */,
 				BD5C028A2A2682A8005AA537 /* InfoBaseRealm.swift in Sources */,
-				BD33836D2A3A52D200B84738 /* Paging.swift in Sources */,
 				BDA9023A2A2DC63A000AA5F9 /* SortedViewController.swift in Sources */,
 				BD5C02762A253B95005AA537 /* PreloaderCollectionViewCell.swift in Sources */,
+				BD3383A92A3B9DF500B84738 /* Away.swift in Sources */,
 				BDD91EC42A30660000900714 /* LineUpViewController.swift in Sources */,
+				BD3383A42A3B9DF500B84738 /* Goals.swift in Sources */,
 				BD5C02AE2A27D2C1005AA537 /* SettingsViewController.swift in Sources */,
 				BDE9FC642A37AE5A003A4558 /* StatisticModel.swift in Sources */,
-				BD33836C2A3A52D200B84738 /* Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,14 +1192,6 @@
 				minimumVersion = 6.0.0;
 			};
 		};
-		BD33838F2A3ACCFD00B84738 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
-			};
-		};
 		BD5C02622A25375C005AA537 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1274,16 +1249,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD33838A2A3ACACB00B84738 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
 			productName = AppsFlyerLib;
-		};
-		BD3383902A3ACCFD00B84738 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD33838F2A3ACCFD00B84738 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		BD3383922A3ACCFD00B84738 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD33838F2A3ACCFD00B84738 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
 		};
 		BD5C02632A25375D005AA537 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

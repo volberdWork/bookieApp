@@ -55,10 +55,11 @@ class MainViewController: UIViewController {
         finishedLabel.textColor = .white
     }
     
-    private func openAllEventsScreen(){
+    private func openAllEventsScreen(model: [Response]){
         let main = UIStoryboard(name: "Main", bundle: nil)
         if let vc = main.instantiateViewController(withIdentifier: "AllEventsViewController") as? AllEventsViewController {
             navigationController?.pushViewController(vc, animated: true)
+            vc.base = model
         }
     }
     
@@ -152,18 +153,18 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func upConingButtonPressed(_ sender: UIButton) {
-        openAllEventsScreen()
+        openAllEventsScreen(model: fixturesBaseArray)
         
     }
     
     @IBAction func liveButtonPressed(_ sender: UIButton) {
-        openAllEventsScreen()
+        openAllEventsScreen(model: liveFixtures)
     }
     
     
     @IBAction func finishButtonPressed(_ sender: UIButton) {
         
-        openAllEventsScreen()
+        openAllEventsScreen(model: finishedFixtures)
     }
     
    
@@ -186,9 +187,9 @@ extension MainViewController : UICollectionViewDelegate{
 extension MainViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
-        case upcomingCollectionView : return fixturesBaseArray.count
-        case liveCollectionView : return liveFixtures.count
-        case finishCollectionView : return finishedFixtures.count
+        case upcomingCollectionView : return fixturesBaseArray.count / 3
+        case liveCollectionView : return liveFixtures.count / 3
+        case finishCollectionView : return finishedFixtures.count / 3
         default:
             return 0
         }

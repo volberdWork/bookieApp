@@ -33,6 +33,9 @@ class UpcomingViewController: UIViewController {
         setupFavorites()
         registerCell()
         congigureView()
+        
+        homeWinButton.setTitle(upCellBase.first?.teams?.home?.name ?? "", for: .normal)
+        awayWinButton.setTitle(upCellBase.first?.teams?.away?.name ?? "", for: .normal)
     }
     
     private func registerCell(){
@@ -54,10 +57,6 @@ class UpcomingViewController: UIViewController {
     }
     
     @objc func heartButtonTapped(){
-        
-       
-
- 
         let data = self.upCellBase.first
         let infoBaseRealm = InfoBaseRealm()
         infoBaseRealm.gameId = data?.fixture?.id ?? 0
@@ -70,14 +69,10 @@ class UpcomingViewController: UIViewController {
         infoBaseRealm.awayGoal = data?.goals?.away ?? 0
         infoBaseRealm.plase = "\(data?.fixture?.venue?.city ?? ""), \(data?.fixture?.venue?.name ?? "")"
         
-        
-        
         try? self.realm?.write{
             self.realm?.add(infoBaseRealm, update: .all)
             self.realm?.refresh()
         }
-        
-       
     }
     
     private func setupFavorites() {
@@ -146,10 +141,11 @@ class UpcomingViewController: UIViewController {
         tableView.backgroundColor = .clear
     }
     
-    private func openStandingsScreen(){
+    private func openStandingsScreen(data: Response){
         let main = UIStoryboard(name: "Main", bundle: nil)
         if let vc = main.instantiateViewController(withIdentifier: "StandingsViewController") as? StandingsViewController {
             navigationController?.pushViewController(vc, animated: true)
+            vc.startData.append(data)
         }
     }
     
@@ -206,7 +202,7 @@ extension UpcomingViewController: UITableViewDelegate{
         switch indexPath.row{
         case 0 :
             print(1)
-            openStandingsScreen()
+            openStandingsScreen(data: upCellBase.first ?? Response(fixture: nil, league: nil, teams: nil, goals: nil, score: nil))
         case 1 :
             print(2)
             openMatchLiveScreen()

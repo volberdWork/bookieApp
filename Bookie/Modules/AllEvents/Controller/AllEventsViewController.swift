@@ -9,6 +9,7 @@ import UIKit
 
 class AllEventsViewController: UIViewController {
 
+    var base:[Response] = []
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -38,12 +39,12 @@ extension AllEventsViewController: UICollectionViewDelegate {
 
 extension AllEventsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return base.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllEventsCollectionViewCell", for: indexPath) as! AllEventsCollectionViewCell
-
+        cell.setupCell(model: base[indexPath.row])
         return cell
     }
 }

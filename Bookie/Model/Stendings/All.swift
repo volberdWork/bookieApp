@@ -12,10 +12,10 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct ResponseLg : Codable {
-	let league : LeagueLg?
-	let country : CountryLg?
-	let seasons : [SeasonsLg]?
-
-
+struct AllSt : Codable {
+	let played : Int?
+	let win : Int?
+	let draw : Int?
+	let lose : Int?
+	let goals : GoalsSt?
 }

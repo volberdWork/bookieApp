@@ -12,7 +12,7 @@ class SortedViewController: UIViewController {
 
     @IBOutlet var titleCont: UILabel!
     @IBOutlet var tableView: UITableView!
-    var ardrdds: [ResponseLg] = []
+   
     var base : [[String]] = [["Upcoming","Live", "Finished", "Postponed", "Cancelled", "Abandoned", "Not Played"], ["B", "Baiano - 1", "Bundesliga", "Bundesliga 2", "C", "Challenger Pro League", "Championship", "Copa del Rey", "Coupe de France", "Cup", "D", "DFB Pokal", "Derde Divisie - Sunday", "Division 1", "E", "Ekstraklasa", "Eerste Divisie", "Eredivisie", "I", "I Liga", "J", "Jupiler Pro League", "K", "KNVB Beker", "L", "La Liga", "League Cup", "League One", "League Two", "Ligue 1", "Ligue 2", "Liga Profesional Argentina", "M", "Matogrossense", "N", "National 1", "P", "Paranaense - 1", "Paulista - A1", "Premier League", "Primeira Liga", "Primera A", "Primera División - Apertura", "S", "Segunda División", "Segunda División", "Segunda Liga", "Serie A", "Serie B", "Serie D - Girone E", "Super Copa", "Superliga", "T", "Taça de Portugal", "Torneo Federal A"]]
     
     override func viewDidLoad() {

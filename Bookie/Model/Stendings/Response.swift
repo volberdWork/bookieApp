@@ -12,10 +12,6 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct LeagueLg : Codable {
-	let id : Int?
-	let name : String?
-	let type : String?
-	let logo : String?
-
+struct ResponseSt : Codable {
+	let league : LeagueSt?
 }

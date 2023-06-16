@@ -12,12 +12,11 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct SeasonsLg : Codable {
-	let year : Int?
-	let start : String?
-	let end : String?
-	let current : Bool?
-	let coverage : CoverageLg?
-
+struct HomeSt : Codable {
+	let played : Int?
+	let win : Int?
+	let draw : Int?
+	let lose : Int?
+	let goals : GoalsSt?
 
 }

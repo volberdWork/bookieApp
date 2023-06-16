@@ -12,13 +12,10 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct LeagueBaseS : Codable {
-	let get : String?
-	let parameters : ParametersLg?
-	let errors : [String]?
-	let results : Int?
-	let paging : PagingLg?
-	let response : [ResponseLg]?
-
-
+struct AwaySt : Codable {
+	let played : Int?
+	let win : Int?
+	let draw : Int?
+	let lose : Int?
+	let goals : GoalsSt?
 }

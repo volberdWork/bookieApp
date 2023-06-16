@@ -12,8 +12,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct PagingLg : Codable {
+struct PagingSt : Codable {
 	let current : Int?
 	let total : Int?
-
 }

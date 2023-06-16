@@ -22,6 +22,8 @@ class UpcomingTableViewCell: UITableViewCell {
         
         titleLabel.font = .displayFont(ofSize: 17, fontType: .SFMedium)
         titleLabel.textColor = .white
+        
+      
     }
     
 }

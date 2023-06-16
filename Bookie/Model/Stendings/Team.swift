@@ -12,15 +12,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct CoverageLg : Codable {
-	let fixtures : FixturesLg?
-	let standings : Bool?
-	let players : Bool?
-	let top_scorers : Bool?
-	let top_assists : Bool?
-	let top_cards : Bool?
-	let injuries : Bool?
-	let predictions : Bool?
-	let odds : Bool?
-
+struct TeamSt : Codable {
+	let id : Int?
+	let name : String?
+	let logo : String?
 }

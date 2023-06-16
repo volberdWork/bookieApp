@@ -12,10 +12,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct CountryLg : Codable {
-	let name : String?
-	let code : String?
-	let flag : String?
-
-
+struct ParametersSt : Codable {
+	let league : String?
+	let season : String?
+	let team : String?
 }

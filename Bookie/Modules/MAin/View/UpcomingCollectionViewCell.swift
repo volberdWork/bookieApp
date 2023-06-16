@@ -88,6 +88,9 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
         
         homeTeamLabel.text = model.teams?.home?.name ?? ""
         awayTeamLabel.text = model.teams?.away?.name ?? ""
+        
+        print(model.league?.id ?? 0)
+        print(model.teams?.home?.id ?? 0)
     }
 
 }
