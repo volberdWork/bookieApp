@@ -12,6 +12,7 @@ class StandingsViewController: UIViewController {
 
     var homeBase: [ResponseSt] = []
     var startData: [Response] = []
+    var allBase: [AllSt] = []
     var homeName = ""
     var awayName = ""
     var league = ""
@@ -43,6 +44,7 @@ class StandingsViewController: UIViewController {
         segmentControl.setTitleTextAttributes(attributes, for: .selected)
         segmentControl.setTitle(startData.first?.teams?.home?.name ?? "", forSegmentAt: 0)
         segmentControl.setTitle(startData.first?.teams?.away?.name ?? "", forSegmentAt: 1)
+        
     }
     
     private func registerCell(){
@@ -50,7 +52,7 @@ class StandingsViewController: UIViewController {
     }
     
     func getStandingsBase(league: String, team: String){
-        let url = "https://v3.football.api-sports.io/standings?league=\(league)&season=2023&team=\(team)"
+        let url = "https://v3.football.api-sports.io/standings?league=\(league)&season=2022&team=\(team)"
         let headers: HTTPHeaders = ["x-apisports-key":"9a49740c5034d7ee252d1e1419a10faa"]
         AF.request(url, headers: headers).responseJSON { responseJSON in
             let decoder = JSONDecoder()
@@ -61,6 +63,10 @@ class StandingsViewController: UIViewController {
                 if let response = data.response{
                     self.homeBase = response
                     self.tableView.reloadData()
+                    print("================================================")
+                    print(league)
+                    print(team)
+                    print("================================================")
                 }
             } catch let error{
                 print("Sorry, no data")
@@ -69,6 +75,15 @@ class StandingsViewController: UIViewController {
         }
     }
     
+    @IBAction func sementControleChanged(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            getStandingsBase(league: "\(startData.first?.league?.id ?? 0)", team: "\(startData.first?.teams?.home?.id ?? 0)")
+            tableView.reloadData()
+           } else if sender.selectedSegmentIndex == sender.numberOfSegments - 1 {
+               getStandingsBase(league: "\(startData.first?.league?.id ?? 0)", team: "\(startData.first?.teams?.away?.id ?? 0)")
+               tableView.reloadData()
+           }
+    }
     
 }
 
@@ -101,41 +116,60 @@ extension StandingsViewController : UITableViewDataSource {
         case 1 : cell.leftLabel.text = "League"
             cell.rightLabel.text = "\(homeBase.first?.league?.name ?? "")"
         case 2 : cell.leftLabel.text = "Points"
-         
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.points ?? 0)"
         case 3 : cell.leftLabel.text = "Goals Diff"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.goalsDiff ?? 0)"
         default:
             return cell
         }
     case 1 :
         switch indexPath.row{
         case 0 : cell.leftLabel.text = "Played"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.all?.played ?? 0)"
         case 1 : cell.leftLabel.text = "Win"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.all?.win ?? 0)"
         case 2 : cell.leftLabel.text = "Draw"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.all?.draw ?? 0)"
         case 3 : cell.leftLabel.text = "Losse"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.all?.lose ?? 0)"
         case 4 : cell.leftLabel.text = "Goals for"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.all?.goals?.forSt ?? 0)"
         case 5 : cell.leftLabel.text = "Goals Against"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.all?.goals?.against ?? 0)"
         default:
             return cell
         }
     case 2 :
         switch indexPath.row{
         case 0 : cell.leftLabel.text = "Played"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.home?.played ?? 0)"
         case 1 : cell.leftLabel.text = "Win"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.home?.win ?? 0)"
         case 2 : cell.leftLabel.text = "Draw"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.home?.draw ?? 0)"
         case 3 : cell.leftLabel.text = "Losse"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.home?.lose ?? 0)"
         case 4 : cell.leftLabel.text = "Goals for"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.home?.goals?.forSt ?? 0)"
         case 5 : cell.leftLabel.text = "Goals Against"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.home?.goals?.against ?? 0)"
         default:
             return cell
         }
     case 3 :
         switch indexPath.row{
         case 0 : cell.leftLabel.text = "Played"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.away?.played ?? 0)"
         case 1 : cell.leftLabel.text = "Win"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.away?.win ?? 0)"
         case 2 : cell.leftLabel.text = "Draw"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.away?.draw ?? 0)"
         case 3 : cell.leftLabel.text = "Losse"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.away?.lose ?? 0)"
         case 4 : cell.leftLabel.text = "Goals for"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.away?.goals?.forSt ?? 0)"
         case 5 : cell.leftLabel.text = "Goals Against"
+            cell.rightLabel.text = "\(homeBase.first?.league?.standings?.first?.first?.away?.goals?.against ?? 0)"
         default:
             return cell
         }

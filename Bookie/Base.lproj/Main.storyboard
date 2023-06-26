@@ -717,13 +717,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgD-72-YpN">
-                                        <rect key="frame" x="111.66666666666669" y="179" width="170" height="30"/>
+                                        <rect key="frame" x="111.66666666666669" y="179" width="170" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="170" id="RMA-Qo-uSc"/>
-                                            <constraint firstAttribute="height" constant="30" id="vGx-gU-dLE"/>
+                                            <constraint firstAttribute="height" constant="36" id="vGx-gU-dLE"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="winButton"/>
+                                        <connections>
+                                            <action selector="winButtonPressed:" destination="UNZ-o0-5NA" eventType="touchUpInside" id="9gb-3u-2jG"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2F-2S-Kuh">
                                         <rect key="frame" x="16" y="109" width="361" height="54"/>
@@ -734,6 +737,9 @@
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="homeButtonPressed:" destination="UNZ-o0-5NA" eventType="touchUpInside" id="vde-G1-1ob"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNt-Pd-TGg">
                                                 <rect key="frame" x="194" y="8" width="159" height="38"/>
@@ -741,6 +747,9 @@
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="awayButtonPressed:" destination="UNZ-o0-5NA" eventType="touchUpInside" id="0gj-iK-x15"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -852,6 +861,7 @@
                         <outlet property="progressBaseView" destination="zgi-pC-thX" id="7Rq-0C-CUb"/>
                         <outlet property="tableView" destination="R96-0G-i9B" id="ng4-ih-w3c"/>
                         <outlet property="viewForButtons" destination="i2F-2S-Kuh" id="hNY-Bh-xob"/>
+                        <outlet property="winButton" destination="fgD-72-YpN" id="XR0-cx-Gao"/>
                         <outlet property="winProccentText" destination="v95-iL-cle" id="jqm-Yd-OgE"/>
                     </connections>
                 </viewController>
@@ -973,6 +983,9 @@
                                 </segments>
                                 <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <color key="selectedSegmentTintColor" red="0.94117647058823528" green="0.53725490196078429" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sementControleChanged:" destination="SBW-CX-RjP" eventType="valueChanged" id="Iik-Ac-lkc"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vyD-EF-71c">
                                 <rect key="frame" x="0.0" y="110" width="393" height="708"/>
@@ -1045,9 +1058,45 @@
                     <view key="view" contentMode="scaleToFill" id="m0W-QO-dxW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ERn-8z-gPD">
+                                <rect key="frame" x="16" y="63" width="361" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40016618939999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="selectedSegmentTintColor" red="0.94117647059999998" green="0.53725490200000003" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sementControleChanged:" destination="SBW-CX-RjP" eventType="valueChanged" id="10Z-EN-wwn"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="P1g-R8-xcp">
+                                <rect key="frame" x="0.0" y="126" width="393" height="692"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nZY-PG-mft" id="G47-e7-Nvl"/>
+                                    <outlet property="delegate" destination="nZY-PG-mft" id="n9C-0O-bff"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4MY-In-orS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P1g-R8-xcp" firstAttribute="top" secondItem="ERn-8z-gPD" secondAttribute="bottom" constant="32" id="7MF-hh-EqN"/>
+                            <constraint firstItem="ERn-8z-gPD" firstAttribute="leading" secondItem="4MY-In-orS" secondAttribute="leading" constant="16" id="He6-EL-qJz"/>
+                            <constraint firstItem="4MY-In-orS" firstAttribute="trailing" secondItem="ERn-8z-gPD" secondAttribute="trailing" constant="16" id="IbQ-HC-Xrc"/>
+                            <constraint firstItem="4MY-In-orS" firstAttribute="trailing" secondItem="P1g-R8-xcp" secondAttribute="trailing" id="OS3-ep-GnC"/>
+                            <constraint firstItem="ERn-8z-gPD" firstAttribute="top" secondItem="4MY-In-orS" secondAttribute="top" constant="4" id="ZUb-wv-MsB"/>
+                            <constraint firstItem="4MY-In-orS" firstAttribute="bottom" secondItem="P1g-R8-xcp" secondAttribute="bottom" id="bte-fQ-igF"/>
+                            <constraint firstItem="P1g-R8-xcp" firstAttribute="leading" secondItem="4MY-In-orS" secondAttribute="leading" id="nE2-ri-cbw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="ERn-8z-gPD" id="2fX-mY-RzL"/>
+                        <outlet property="tableView" destination="P1g-R8-xcp" id="s4n-TL-zyk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6Q-MO-02c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1062,6 +1111,7 @@
         <image name="noDataText" width="225.66667175292969" height="81"/>
         <image name="rightIconImage" width="12" height="11.666666984558105"/>
         <image name="toAllImage" width="40" height="14.666666984558105"/>
+        <image name="winButton" width="114.66666412353516" height="22.666666030883789"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

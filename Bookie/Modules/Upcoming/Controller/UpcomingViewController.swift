@@ -12,6 +12,7 @@ class UpcomingViewController: UIViewController {
     
     var upCellBase: [Response] = []
     
+    @IBOutlet var winButton: UIButton!
     private let realm = try? Realm()
     private var arrayOfFavorites: [InfoBaseRealm] = []
 
@@ -28,6 +29,11 @@ class UpcomingViewController: UIViewController {
     @IBOutlet var actionsLabel: UILabel!
     @IBOutlet var preMatchLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
+    
+    var homeButtonPress = false
+    var awayButtonPress = false
+    var winButtonPress = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupFavorites()
@@ -136,7 +142,9 @@ class UpcomingViewController: UIViewController {
 //        homeWinButton.backgroundColor = UIColor(red: 251, green: 251, blue: 251, alpha: 0.3)
         
         awayWinButton.layer.cornerRadius = 14
-//        awayWinButton.backgroundColor = UIColor(red: 251, green: 251, blue: 251, alpha: 0.3)
+        
+        winButton.layer.cornerRadius = 14
+      
         
         tableView.backgroundColor = .clear
     }
@@ -153,6 +161,7 @@ class UpcomingViewController: UIViewController {
         let main = UIStoryboard(name: "Main", bundle: nil)
         if let vc = main.instantiateViewController(withIdentifier: "MatchLiveViewController") as? MatchLiveViewController {
             navigationController?.pushViewController(vc, animated: true)
+            vc.fixtereId = upCellBase.first?.fixture?.id ?? 0
         }
     }
     
@@ -162,8 +171,50 @@ class UpcomingViewController: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+    @IBAction func homeButtonPressed(_ sender: UIButton) {
+        if homeButtonPress{
+            homeButtonPress = false
+            sender.backgroundColor = UIColor(red: 251/255, green: 251/255, blue: 251/255, alpha: 0.3)
+        } else{
+            homeButtonPress = true
+            sender.backgroundColor = .customYellow
+            
+        }
+        
+        
+    }
     
-
+    
+    @IBAction func awayButtonPressed(_ sender: UIButton) {
+        if awayButtonPress{
+            awayButtonPress = false
+            sender.backgroundColor = UIColor(red: 251/255, green: 251/255, blue: 251/255, alpha: 0.3)
+        } else{
+            awayButtonPress = true
+            sender.backgroundColor = .customYellow
+        }
+        
+       
+        
+    }
+    
+    @IBAction func winButtonPressed(_ sender: UIButton) {
+        if winButtonPress{
+            winButtonPress = false
+            sender.backgroundColor = .customYellow
+        } else{
+            winButtonPress = true
+            sender.backgroundColor = .customLightGrey
+        }
+        
+        if winButtonPress{
+            sender.setBackgroundImage(UIImage(named: "winButtonPress"), for: .normal)
+        } else{
+            sender.setBackgroundImage(UIImage(named: "winButton"), for: .normal)
+        }
+        print(winButtonPress)
+    }
+    
 }
 
 extension UpcomingViewController: UICollectionViewDataSource{
