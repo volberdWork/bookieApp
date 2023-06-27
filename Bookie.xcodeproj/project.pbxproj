@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BD2CFF722A325D85007F3AA2 /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2CFF702A325D85007F3AA2 /* UpcomingTableViewCell.swift */; };
 		BD2CFF732A325D85007F3AA2 /* UpcomingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2CFF712A325D85007F3AA2 /* UpcomingTableViewCell.xib */; };
+		BD2EC2282A4A08EF007B0C25 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2EC2262A4A08EF007B0C25 /* ImageTableViewCell.swift */; };
+		BD2EC2292A4A08EF007B0C25 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2EC2272A4A08EF007B0C25 /* ImageTableViewCell.xib */; };
+		BD2EC22C2A4A09EA007B0C25 /* LineUpBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2EC22B2A4A09EA007B0C25 /* LineUpBase.swift */; };
 		BD3244FA2A2FA60500BA95D4 /* AllEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3244F92A2FA60500BA95D4 /* AllEventsViewController.swift */; };
 		BD3244FF2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3244FD2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift */; };
 		BD3245002A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD3244FE2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib */; };
@@ -81,6 +84,9 @@
 /* Begin PBXFileReference section */
 		BD2CFF702A325D85007F3AA2 /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
 		BD2CFF712A325D85007F3AA2 /* UpcomingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingTableViewCell.xib; sourceTree = "<group>"; };
+		BD2EC2262A4A08EF007B0C25 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		BD2EC2272A4A08EF007B0C25 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		BD2EC22B2A4A09EA007B0C25 /* LineUpBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineUpBase.swift; sourceTree = "<group>"; };
 		BD3244F92A2FA60500BA95D4 /* AllEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsViewController.swift; sourceTree = "<group>"; };
 		BD3244FD2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD3244FE2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllEventsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -179,6 +185,23 @@
 				BD2CFF712A325D85007F3AA2 /* UpcomingTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BD2EC2252A4A08D0007B0C25 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD2EC2262A4A08EF007B0C25 /* ImageTableViewCell.swift */,
+				BD2EC2272A4A08EF007B0C25 /* ImageTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BD2EC22A2A4A09EA007B0C25 /* LineUpModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD2EC22B2A4A09EA007B0C25 /* LineUpBase.swift */,
+			);
+			path = LineUpModel;
 			sourceTree = "<group>";
 		};
 		BD3244F62A2FA4B700BA95D4 /* Modules */ = {
@@ -354,6 +377,7 @@
 		BD5C02802A268295005AA537 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD2EC22A2A4A09EA007B0C25 /* LineUpModel */,
 				BD3383942A3B9DE400B84738 /* Stendings */,
 				BDE9FC5E2A37AE5A003A4558 /* NetWorking */,
 				BD5C02812A2682A7005AA537 /* Relm Model */,
@@ -551,6 +575,7 @@
 		BDD91EB52A3062B900900714 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD2EC2252A4A08D0007B0C25 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -819,6 +844,7 @@
 				BD2CFF732A325D85007F3AA2 /* UpcomingTableViewCell.xib in Resources */,
 				BD9E50E92A2D377E00996D82 /* SettingsTableViewCell.xib in Resources */,
 				BD5C02772A253B95005AA537 /* PreloaderCollectionViewCell.xib in Resources */,
+				BD2EC2292A4A08EF007B0C25 /* ImageTableViewCell.xib in Resources */,
 				BD82E51D2A2BC147005EEF71 /* UpcomingCollectionViewCell.xib in Resources */,
 				BD5C02582A25373C005AA537 /* Assets.xcassets in Resources */,
 				BDD91ECF2A306C8100900714 /* UniversalTableViewCell.xib in Resources */,
@@ -858,6 +884,7 @@
 				BD5C02532A25373A005AA537 /* PreloaderController.swift in Sources */,
 				BD3383602A3A214500B84738 /* GetData.swift in Sources */,
 				BDD91ECE2A306C8100900714 /* UniversalTableViewCell.swift in Sources */,
+				BD2EC22C2A4A09EA007B0C25 /* LineUpBase.swift in Sources */,
 				BDE9FC692A37B185003A4558 /* SortedTableViewCell.swift in Sources */,
 				BD82E5212A2BD1D3005EEF71 /* CurrentCollectionViewCell.swift in Sources */,
 				BDD91EC82A30662500900714 /* UpcomingViewController.swift in Sources */,
@@ -874,6 +901,7 @@
 				BD3244FA2A2FA60500BA95D4 /* AllEventsViewController.swift in Sources */,
 				BD82E51C2A2BC147005EEF71 /* UpcomingCollectionViewCell.swift in Sources */,
 				BD3383A82A3B9DF500B84738 /* StandingsBase.swift in Sources */,
+				BD2EC2282A4A08EF007B0C25 /* ImageTableViewCell.swift in Sources */,
 				BDD91ECA2A30663A00900714 /* MatchLiveViewController.swift in Sources */,
 				BD5C027F2A253D75005AA537 /* UIFont+ProDisplay.swift in Sources */,
 				BD3244FF2A2FA72C00BA95D4 /* AllEventsCollectionViewCell.swift in Sources */,

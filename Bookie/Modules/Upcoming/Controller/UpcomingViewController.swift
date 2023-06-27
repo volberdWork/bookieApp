@@ -169,6 +169,9 @@ class UpcomingViewController: UIViewController {
         let main = UIStoryboard(name: "Main", bundle: nil)
         if let vc = main.instantiateViewController(withIdentifier: "LineUpViewController") as? LineUpViewController {
             navigationController?.pushViewController(vc, animated: true)
+            vc.fixtureId = upCellBase.first?.fixture?.id ?? 0
+            vc.teamId = upCellBase.first?.teams?.home?.id ?? 0
+            vc.awayId = upCellBase.first?.teams?.away?.id ?? 0
         }
     }
     @IBAction func homeButtonPressed(_ sender: UIButton) {

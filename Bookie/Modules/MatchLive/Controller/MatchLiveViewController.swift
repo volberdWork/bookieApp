@@ -16,6 +16,7 @@ class MatchLiveViewController: UIViewController {
     var fixtereId = 0
     var eventsBase: [ResponseEvents] = []
     
+    @IBOutlet var noDataImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -50,6 +51,11 @@ tableView.backgroundColor = .customDarkGrey
             } catch let error {
                 print("Error: \(error)")
                 print("Failed to decode data for fixture with ID \(id)")
+            }
+            if self.eventsBase.isEmpty{
+                self.tableView.isHidden = true
+            } else{
+                self.tableView.isHidden = false
             }
         }
     }

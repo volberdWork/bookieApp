@@ -10,6 +10,7 @@ import Alamofire
 
 class StandingsViewController: UIViewController {
 
+    @IBOutlet var noDataImageView: UIImageView!
     var homeBase: [ResponseSt] = []
     var startData: [Response] = []
     var allBase: [AllSt] = []
@@ -52,7 +53,7 @@ class StandingsViewController: UIViewController {
     }
     
     func getStandingsBase(league: String, team: String){
-        let url = "https://v3.football.api-sports.io/standings?league=\(league)&season=2022&team=\(team)"
+        let url = "https://v3.football.api-sports.io/standings?league=\(league)&season=2023&team=\(team)"
         let headers: HTTPHeaders = ["x-apisports-key":"9a49740c5034d7ee252d1e1419a10faa"]
         AF.request(url, headers: headers).responseJSON { responseJSON in
             let decoder = JSONDecoder()
@@ -63,10 +64,12 @@ class StandingsViewController: UIViewController {
                 if let response = data.response{
                     self.homeBase = response
                     self.tableView.reloadData()
-                    print("================================================")
-                    print(league)
-                    print(team)
-                    print("================================================")
+                    
+                    if self.homeBase.isEmpty{
+                        self.tableView.isHidden = true
+                    } else{
+                        self.tableView.isHidden = false
+                    }
                 }
             } catch let error{
                 print("Sorry, no data")

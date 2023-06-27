@@ -974,6 +974,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noDataText" translatesAutoresizingMaskIntoConstraints="NO" id="kBc-RS-NrC">
+                                <rect key="frame" x="16" y="340.66666666666669" width="361" height="170.66666666666669"/>
+                            </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5fB-0K-m8u">
                                 <rect key="frame" x="16" y="63" width="361" height="32"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40016618943372312" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1001,14 +1004,20 @@
                         <constraints>
                             <constraint firstItem="Cfb-Mg-10o" firstAttribute="trailing" secondItem="5fB-0K-m8u" secondAttribute="trailing" constant="16" id="0Fg-2i-xLI"/>
                             <constraint firstItem="Cfb-Mg-10o" firstAttribute="bottom" secondItem="vyD-EF-71c" secondAttribute="bottom" id="Aed-a0-fyg"/>
+                            <constraint firstItem="Cfb-Mg-10o" firstAttribute="trailing" secondItem="kBc-RS-NrC" secondAttribute="trailing" constant="16" id="Djl-di-736"/>
                             <constraint firstItem="5fB-0K-m8u" firstAttribute="top" secondItem="Cfb-Mg-10o" secondAttribute="top" constant="4" id="MID-T5-FZr"/>
                             <constraint firstItem="vyD-EF-71c" firstAttribute="leading" secondItem="Cfb-Mg-10o" secondAttribute="leading" id="Tb5-ZE-7PA"/>
                             <constraint firstItem="5fB-0K-m8u" firstAttribute="leading" secondItem="Cfb-Mg-10o" secondAttribute="leading" constant="16" id="UQB-bn-cr2"/>
+                            <constraint firstItem="kBc-RS-NrC" firstAttribute="leading" secondItem="Cfb-Mg-10o" secondAttribute="leading" constant="16" id="YGt-ug-Chw"/>
+                            <constraint firstItem="kBc-RS-NrC" firstAttribute="height" secondItem="gaJ-Co-nrb" secondAttribute="height" multiplier="0.2" id="aek-JX-52k"/>
+                            <constraint firstItem="kBc-RS-NrC" firstAttribute="centerY" secondItem="gaJ-Co-nrb" secondAttribute="centerY" id="dOW-tS-eNj"/>
                             <constraint firstItem="Cfb-Mg-10o" firstAttribute="trailing" secondItem="vyD-EF-71c" secondAttribute="trailing" id="gb8-VF-oSU"/>
+                            <constraint firstItem="kBc-RS-NrC" firstAttribute="centerX" secondItem="gaJ-Co-nrb" secondAttribute="centerX" id="hnA-ZI-hKY"/>
                             <constraint firstItem="vyD-EF-71c" firstAttribute="top" secondItem="5fB-0K-m8u" secondAttribute="bottom" constant="16" id="wg4-hd-c0X"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="noDataImageView" destination="kBc-RS-NrC" id="7ba-FL-EMV"/>
                         <outlet property="segmentControl" destination="5fB-0K-m8u" id="cxb-wo-8Td"/>
                         <outlet property="tableView" destination="vyD-EF-71c" id="lpK-w7-RTa"/>
                     </connections>
@@ -1025,6 +1034,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noDataText" translatesAutoresizingMaskIntoConstraints="NO" id="rsh-kc-0Na">
+                                <rect key="frame" x="16" y="340.66666666666669" width="361" height="170.66666666666669"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="guL-3H-Wq0">
                                 <rect key="frame" x="0.0" y="75" width="393" height="743"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1037,13 +1049,19 @@
                         <viewLayoutGuide key="safeArea" id="isw-hV-QXO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="rsh-kc-0Na" firstAttribute="leading" secondItem="isw-hV-QXO" secondAttribute="leading" constant="16" id="3Ys-2X-jGU"/>
                             <constraint firstItem="guL-3H-Wq0" firstAttribute="top" secondItem="isw-hV-QXO" secondAttribute="top" constant="16" id="4Gc-tL-htK"/>
+                            <constraint firstItem="rsh-kc-0Na" firstAttribute="centerY" secondItem="hYa-La-sPn" secondAttribute="centerY" id="Afv-Wk-gIR"/>
                             <constraint firstItem="guL-3H-Wq0" firstAttribute="leading" secondItem="isw-hV-QXO" secondAttribute="leading" id="NJx-ft-2tH"/>
+                            <constraint firstItem="isw-hV-QXO" firstAttribute="trailing" secondItem="rsh-kc-0Na" secondAttribute="trailing" constant="16" id="Szw-MJ-soT"/>
                             <constraint firstItem="isw-hV-QXO" firstAttribute="bottom" secondItem="guL-3H-Wq0" secondAttribute="bottom" id="dL0-TF-orW"/>
+                            <constraint firstItem="rsh-kc-0Na" firstAttribute="height" secondItem="hYa-La-sPn" secondAttribute="height" multiplier="0.2" id="kOM-68-t5x"/>
+                            <constraint firstItem="rsh-kc-0Na" firstAttribute="centerX" secondItem="hYa-La-sPn" secondAttribute="centerX" id="kq9-GK-FyN"/>
                             <constraint firstItem="isw-hV-QXO" firstAttribute="trailing" secondItem="guL-3H-Wq0" secondAttribute="trailing" id="tIl-Kt-8TX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="noDataImage" destination="rsh-kc-0Na" id="wjr-48-s4c"/>
                         <outlet property="tableView" destination="guL-3H-Wq0" id="bVr-fd-Clc"/>
                     </connections>
                 </viewController>
@@ -1059,6 +1077,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noDataText" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-QE-lWI">
+                                <rect key="frame" x="16" y="340.66666666666669" width="361" height="170.66666666666669"/>
+                            </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ERn-8z-gPD">
                                 <rect key="frame" x="16" y="63" width="361" height="32"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40016618939999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1070,6 +1091,7 @@
                                 <color key="selectedSegmentTintColor" red="0.94117647059999998" green="0.53725490200000003" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="sementControleChanged:" destination="SBW-CX-RjP" eventType="valueChanged" id="10Z-EN-wwn"/>
+                                    <action selector="sementControleChanged:" destination="nZY-PG-mft" eventType="valueChanged" id="UYb-Eu-QR9"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="P1g-R8-xcp">
@@ -1085,15 +1107,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="P1g-R8-xcp" firstAttribute="top" secondItem="ERn-8z-gPD" secondAttribute="bottom" constant="32" id="7MF-hh-EqN"/>
+                            <constraint firstItem="4MY-In-orS" firstAttribute="trailing" secondItem="fYc-QE-lWI" secondAttribute="trailing" constant="16" id="8Fl-8J-1zi"/>
                             <constraint firstItem="ERn-8z-gPD" firstAttribute="leading" secondItem="4MY-In-orS" secondAttribute="leading" constant="16" id="He6-EL-qJz"/>
                             <constraint firstItem="4MY-In-orS" firstAttribute="trailing" secondItem="ERn-8z-gPD" secondAttribute="trailing" constant="16" id="IbQ-HC-Xrc"/>
                             <constraint firstItem="4MY-In-orS" firstAttribute="trailing" secondItem="P1g-R8-xcp" secondAttribute="trailing" id="OS3-ep-GnC"/>
+                            <constraint firstItem="fYc-QE-lWI" firstAttribute="height" secondItem="m0W-QO-dxW" secondAttribute="height" multiplier="0.2" id="RK8-d5-48K"/>
+                            <constraint firstItem="fYc-QE-lWI" firstAttribute="leading" secondItem="4MY-In-orS" secondAttribute="leading" constant="16" id="Rfn-8m-clg"/>
                             <constraint firstItem="ERn-8z-gPD" firstAttribute="top" secondItem="4MY-In-orS" secondAttribute="top" constant="4" id="ZUb-wv-MsB"/>
                             <constraint firstItem="4MY-In-orS" firstAttribute="bottom" secondItem="P1g-R8-xcp" secondAttribute="bottom" id="bte-fQ-igF"/>
                             <constraint firstItem="P1g-R8-xcp" firstAttribute="leading" secondItem="4MY-In-orS" secondAttribute="leading" id="nE2-ri-cbw"/>
+                            <constraint firstItem="fYc-QE-lWI" firstAttribute="centerX" secondItem="m0W-QO-dxW" secondAttribute="centerX" id="nTK-Fq-89a"/>
+                            <constraint firstItem="fYc-QE-lWI" firstAttribute="centerY" secondItem="m0W-QO-dxW" secondAttribute="centerY" id="u08-cH-ICE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="noDataImage" destination="fYc-QE-lWI" id="IeO-hd-pgk"/>
                         <outlet property="segmentControl" destination="ERn-8z-gPD" id="2fX-mY-RzL"/>
                         <outlet property="tableView" destination="P1g-R8-xcp" id="s4n-TL-zyk"/>
                     </connections>
